@@ -1,3 +1,4 @@
+@import 'responsive/res.scss';
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 // font-family: 'Abhaya Libre', serif;
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Pathway+Extreme:wght@100;200;300;400;500;600&display=swap');
@@ -17,6 +18,12 @@ textarea,
 select,
 button {outline: none;}
 
+@mixin flex($display,$alignitem,$justifycontent) {
+    display: $display;
+    align-items: $alignitem;
+    justify-content: $justifycontent;
+}
+
 /*----------ROOT----------*/ 
 
 // Font-family
@@ -26,13 +33,75 @@ $second-font: 'Pathway Extreme', sans-serif;
 
 // Font-size
 $big-font_size: 24px;
-$nomal-font_size: 20px;
+$normal-font_size: 20px;
 $small-font_size: 16px;
 $smallest-font_size: 14px;
 // Font-size
 
+// Color
+$main-color-font: rgb(36, 36, 36);
+$active-color-font: #C6322F;
+$second-color-font: #A39D9D;
+$background-color: #BBA59E;
+
 /*----------ROOT----------*/ 
 
-p {
-    font-family: $main-font;
+// Header/Start
+.header {
+    width: 100%;
+    height: 60px;
+
+    .header-container {
+        width: 1024px;
+        height: 100%;
+        margin: 0 auto;
+
+        &__menu {
+            width: 100%;
+            height: 100%;
+            @include flex(flex,center,center);
+
+            .logo {
+                width: 20%;
+                height: 100%;
+                // background-color: blue;
+                @include flex(flex,center,left);
+                cursor: pointer;
+
+                span {
+                    font-family: $main-font;
+                    font-size: 28px;
+                    font-weight: 500;
+                }
+
+            }
+
+            .sub-menu {
+                width: 80%;
+                height: 100%;
+                // background-color: red;
+                @include flex(flex,center,right);
+
+                ul {
+                    @include flex(flex,center,center);
+                    li {
+                        padding: 0 15px;
+                        a {
+                            font-size: $small-font_size;
+                            font-family: $second-font;
+                            color: $main-color-font;
+                        }
+
+                        &:last-child {padding-right: 0;}
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
 }
+.header .active {box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+// Header/End
