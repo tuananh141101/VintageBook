@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Pathway+Extreme:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
+@media screen and (max-width: 1030px) {
+  header.header .header-container {
+    width: 992px;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -39,7 +44,7 @@ button {
   height: 60px;
 }
 .header .header-container {
-  width: 1024px;
+  width: 1200px;
   height: 100%;
   margin: 0 auto;
 }
@@ -104,11 +109,47 @@ button {
 }
 .header .header-container__menu .sub-menu ul li a {
   font-size: 16px;
-  font-family: "Pathway Extreme", sans-serif;
+  font-family: "Inter", sans-serif;
   color: rgb(36, 36, 36);
 }
 .header .header-container__menu .sub-menu ul li:last-child {
   padding-right: 0;
+}
+.header .header-container__menu .sub-menu ul li .bars-icon {
+  display: none;
+}
+.header .header-container__menu .sub-menu ul li:nth-child(6) {
+  position: relative;
+  padding: 0px 5px;
+}
+.header .header-container__menu .sub-menu ul li:nth-child(6) input {
+  border: none;
+  outline: none;
+  padding: 8px 30px 10px 10px;
+  width: 0px;
+  opacity: 0;
+  visibility: hidden;
+  text-align: left;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-family: "Inter", sans-serif;
+}
+.header .header-container__menu .sub-menu ul li:nth-child(6) .active-search-icon {
+  width: 150px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #EBDCDC;
+}
+.header .header-container__menu .sub-menu ul li:nth-child(6) .search-icon {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  cursor: pointer;
+}
+.header .header-container__menu .sub-menu ul li:nth-child(7) {
+  padding: 0px 5px;
 }
 
 .header .active {
@@ -119,4 +160,9 @@ button {
 .banner {
   width: 100%;
   background-color: violet;
+}
+.banner .banner-container {
+  width: 1200px;
+  margin: auto;
+  background-color: #C6322F;
 }

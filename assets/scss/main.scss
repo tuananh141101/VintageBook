@@ -1,8 +1,8 @@
 @import 'responsive/res.scss';
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 // font-family: 'Abhaya Libre', serif;
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Pathway+Extreme:wght@100;200;300;400;500;600&display=swap');
-// font-family: 'Pathway Extreme', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap');
+// font-family: 'Inter', sans-serif;
 * {
     padding: 0;
     margin: 0;
@@ -28,7 +28,7 @@ button {outline: none;}
 
 // Font-family
 $main-font: 'Abhaya Libre', serif;
-$second-font: 'Pathway Extreme', sans-serif;
+$second-font: 'Inter', sans-serif;
 // Font-family
 
 // Font-size
@@ -52,7 +52,7 @@ $background-color: #BBA59E;
     height: 60px;
 
     .header-container {
-        width: 1024px;
+        width: 1200px;
         height: 100%;
         margin: 0 auto;
 
@@ -84,6 +84,7 @@ $background-color: #BBA59E;
 
                 ul {
                     @include flex(flex,center,center);
+
                     li {
                         padding: 0 15px;
                         a {
@@ -93,7 +94,46 @@ $background-color: #BBA59E;
                         }
 
                         &:last-child {padding-right: 0;}
+
+                        .bars-icon {display: none;}
+
+                        &:nth-child(6) {
+                            position: relative;
+                            padding: 0px 5px;
+
+                            input {
+                                border: none;
+                                outline: none;
+                                padding: 8px 30px 10px 10px;
+                                width: 0px;
+                                opacity: 0;
+                                visibility: hidden;
+                                text-align: left;
+                                transition: all .4s;
+                                font-family: $second-font;
+                            }
+
+                            .active-search-icon {
+                                width: 150px;
+                                opacity: 1;
+                                visibility: visible;
+                                transition: all .4s;
+                                background-color: #EBDCDC;
+                            }
+
+                            .search-icon {
+                                position: absolute;
+                                top: 8px;
+                                right: 20px;
+                                cursor: pointer;
+                            }
+                        }
+
+                        &:nth-child(7) {padding: 0px 5px;}
+
                     }
+                    
+
                 }
 
             }
@@ -110,5 +150,12 @@ $background-color: #BBA59E;
 .banner {
     width: 100%;
     background-color: violet;
+    
+    .banner-container {
+        width: 1200px;
+        margin: auto;
+        background-color: #C6322F;
+    }
+
 }
 // Banner/End
