@@ -15,3 +15,10 @@ form.addEventListener('submit', () => {
         alert("Please enter name of books");
     }
 });
+
+// Header-scroll
+const headerScroll = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    headerScroll.classList.add("active-header-scroll");
+});
