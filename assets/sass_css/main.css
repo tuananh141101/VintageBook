@@ -34,6 +34,10 @@
   header.header .header-container .header-container__menu .sub-menu {
     width: 30%;
   }
+  section.banner .banner-container {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
 * {
   padding: 0;

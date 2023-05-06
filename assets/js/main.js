@@ -30,11 +30,9 @@ const closeOverlay = document.querySelector('.overlay-menu p');
 
 barIcon.addEventListener('click', () => {
     overlayMenu.classList.add("active-overlay");
-    barIcon.style.display = "none";
 });
 
 closeOverlay.addEventListener('click', ()=> {
     overlayMenu.classList.remove('active-overlay');
-    barIcon.style.display = "block";
-})
+});
 

@@ -23,6 +23,7 @@
 }
 
 @media screen and (max-width:768px) {
+    // Header
     header.header .header-container {
         width: 100%;
         padding: 0 10px;
@@ -30,5 +31,11 @@
             .logo {width: 70%;}
             .sub-menu {width: 30%;}
         }
+    }
+
+    // Banner
+    section.banner .banner-container {
+        width: 100%;
+        padding: 0 10px ;
     }
 }
