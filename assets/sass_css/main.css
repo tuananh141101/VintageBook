@@ -225,6 +225,9 @@ button {
   font-family: "Inter", sans-serif;
   color: rgb(36, 36, 36);
 }
+.header .header-container__menu .sub-menu ul li a.home {
+  color: #C6322F;
+}
 .header .header-container__menu .sub-menu ul li:nth-child(6) {
   position: relative;
   padding-right: 5px;
@@ -372,6 +375,9 @@ button {
   letter-spacing: 3px;
   font-family: "Abhaya Libre", serif;
   font-size: 55px;
+}
+.banner .banner-container__left h1 span {
+  color: #C6322F;
 }
 .banner .banner-container__left p {
   font-family: "Inter", sans-serif;

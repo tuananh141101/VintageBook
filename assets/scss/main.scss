@@ -94,11 +94,13 @@ $background-color: #BBA59E;
 
                     li {
                         padding: 0 15px;
+
                         a {
                             font-size: $small-font_size;
                             font-family: $second-font;
                             color: $main-color-font;
                         }
+                        a.home {color: $active-color-font;}
 
                         &:nth-child(6) {
                             position: relative;
@@ -138,6 +140,7 @@ $background-color: #BBA59E;
                         &:last-child {padding: 0;}
 
                     }
+
 
                     li.bars-icon {
                         display: none;
@@ -246,6 +249,7 @@ $background-color: #BBA59E;
                 letter-spacing: 3px;
                 font-family: $main-font;
                 font-size: 55px;
+                span {color: $active-color-font;}
             }
 
             p {
