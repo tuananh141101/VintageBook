@@ -73,3 +73,10 @@
         }
     }
 }
+
+@media screen and (max-width:480px) {
+    section.banner .banner-container {
+        .banner-container__left {height: 50%;}
+        .banner-container__right {height: 50%;}
+    }
+}

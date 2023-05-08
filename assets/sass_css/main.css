@@ -98,6 +98,14 @@
     letter-spacing: 0;
   }
 }
+@media screen and (max-width: 480px) {
+  section.banner .banner-container .banner-container__left {
+    height: 50%;
+  }
+  section.banner .banner-container .banner-container__right {
+    height: 50%;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -279,65 +287,11 @@ button {
   background-color: #fff;
 }
 
-.overlay-menu {
-  width: 100%;
-  height: 1060px;
-  background-color: #000;
-  opacity: 0.8;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.overlay-menu ul {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 2%;
-  left: 5%;
-}
-.overlay-menu ul li {
-  padding: 10px 0;
-}
-.overlay-menu ul li a {
-  color: white;
-  font-size: 26px;
-  font-family: "Abhaya Libre", serif;
-}
-.overlay-menu ul li:nth-child(5) i {
-  color: #BBA59E;
-}
-.overlay-menu ul li:nth-child(5) input {
-  border: none;
-  outline: none;
-  padding: 8px 10px 8px 5px;
-  background-color: #000;
-  color: white;
-  font-size: 20px;
-}
-.overlay-menu ul li:nth-child(5):hover i {
-  color: white;
-}
-.overlay-menu p {
-  color: #BBA59E;
-  font-size: 24px;
-  position: absolute;
-  right: 5%;
-  top: 3%;
-}
-.overlay-menu p:hover {
-  color: white;
-}
-
-.active-overlay {
-  opacity: 0.9;
-  visibility: visible;
-}
-
 .banner {
   width: 100%;
   height: 600px;
   margin: 45px 0 20px 0;
+  background-color: violet;
 }
 .banner .banner-container {
   width: 1200px;
@@ -398,4 +352,59 @@ button {
   background: #f4f4f4 no-repeat center 30%;
   background-size: cover;
   border-radius: 50%;
+}
+
+.overlay-menu {
+  width: 100%;
+  height: 1060px;
+  background-color: #000;
+  opacity: 0.8;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.overlay-menu ul {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+}
+.overlay-menu ul li {
+  padding: 10px 0;
+}
+.overlay-menu ul li a {
+  color: white;
+  font-size: 26px;
+  font-family: "Abhaya Libre", serif;
+}
+.overlay-menu ul li:nth-child(5) i {
+  color: #BBA59E;
+}
+.overlay-menu ul li:nth-child(5) input {
+  border: none;
+  outline: none;
+  padding: 8px 10px 8px 5px;
+  background-color: #000;
+  color: white;
+  font-size: 20px;
+}
+.overlay-menu ul li:nth-child(5):hover i {
+  color: white;
+}
+.overlay-menu p {
+  color: #BBA59E;
+  font-size: 24px;
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+.overlay-menu p:hover {
+  color: white;
+}
+
+.active-overlay {
+  opacity: 0.9;
+  visibility: visible;
 }

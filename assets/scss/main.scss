@@ -165,6 +165,64 @@ $background-color: #BBA59E;
 }
 // Header/End
 
+// Banner/Start
+.banner {
+    width: 100%;
+    height: 600px;   
+    margin: 45px 0 20px 0;
+    background-color: violet;
+    
+    .banner-container {
+        width: 1200px;
+        height: 100%;
+        margin: auto;
+        @include flex(flex,center,center);
+        
+        &__left {
+            width: 50%;
+            height: 100%;
+            @include flex(flex,center,center);
+            flex-direction: column;
+
+            h1 {
+                font-weight: 600;
+                letter-spacing: 3px;
+                font-family: $main-font;
+                font-size: 55px;
+                span {color: $active-color-font;}
+            }
+            
+            p {
+                font-family: $second-font;
+                font-size: $small-font_size;
+                letter-spacing: 1px;
+                color: $second-color-font;
+                text-align: justify;
+                padding-right: 100px;
+            }
+
+        }
+        
+        &__right {
+            width: 50%;
+            height: 100%;
+            
+            .image {
+                width: 100%;
+                height: 100%;
+                padding-top: calc(3 / 4 * 100%);
+                background: #f4f4f4 no-repeat center 30%;
+                background-size: cover;
+                border-radius: 50%;
+            }
+            
+        }
+
+    }
+
+}
+// Banner/End
+
 // Overlay-menu/Start
 .overlay-menu {
     width: 100%;
@@ -225,61 +283,3 @@ $background-color: #BBA59E;
     visibility: visible;
 }
 // Overlay-menu/End
-
-
-// Banner/Start
-.banner {
-    width: 100%;
-    height: 600px;   
-    margin: 45px 0 20px 0;
-    .banner-container {
-        width: 1200px;
-        height: 100%;
-        margin: auto;
-        @include flex(flex,center,center);
-
-        &__left {
-            width: 50%;
-            height: 100%;
-            @include flex(flex,center,center);
-            flex-direction: column;
-
-            h1 {
-                font-weight: 600;
-                letter-spacing: 3px;
-                font-family: $main-font;
-                font-size: 55px;
-                span {color: $active-color-font;}
-            }
-
-            p {
-                font-family: $second-font;
-                font-size: $small-font_size;
-                letter-spacing: 1px;
-                color: $second-color-font;
-                text-align: justify;
-                padding-right: 100px;
-            }
-
-        }
-
-        &__right {
-            width: 50%;
-            height: 100%;
-            
-            .image {
-                width: 100%;
-                height: 100%;
-                padding-top: calc(3 / 4 * 100%);
-                background: #f4f4f4 no-repeat center 30%;
-                background-size: cover;
-                border-radius: 50%;
-            }
-
-        }
-
-    }
-
-}
-
-// Banner/End
