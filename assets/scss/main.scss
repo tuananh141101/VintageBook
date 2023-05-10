@@ -280,7 +280,7 @@ $background-color: #BBA59E;
     width: 100%;
     height: 437px;
     margin-bottom: 40px;
-    margin-top: 130px;
+    margin-top: 150px;
 
     &__container {
         width: 1200px;
@@ -385,8 +385,10 @@ $background-color: #BBA59E;
 }
 .products-bestselling .products__container::after {content:"Bestselling from Vintage"}
 .products-bestselling .products__container::before {height: 2px;}
+.products-bestselling {margin-top: 80px;}
 .products-sale .products__container::after {content:"Sale from Vintage"}
 .products-sale .products__container::before {height: 1px;}
+.products-sale {margin-top: 80px;}
 // Product-new/End
 
 
