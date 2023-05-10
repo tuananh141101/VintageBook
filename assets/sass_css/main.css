@@ -55,8 +55,11 @@
     overflow-x: auto;
     padding: 30px 0;
   }
-  section.products-new .products-new__container {
+  section.products .products__container {
     width: 992px;
+  }
+  section.products .products__container::after {
+    left: 4%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -76,8 +79,11 @@
   section.categories .categories__container {
     width: 768px;
   }
-  section.products-new .products-new__container {
+  section.products .products__container {
     width: 768px;
+  }
+  section.products .products__container::after {
+    left: 5%;
   }
   div.overlay-menu ul {
     top: 4%;
@@ -110,9 +116,15 @@
     width: 100px;
     height: 100px;
   }
-  section.products-new .products-new__container {
+  section.products .products__container {
     width: 100%;
     padding: 0 10px;
+  }
+  section.products .products__container::before {
+    display: none;
+  }
+  section.products .products__container::after {
+    left: 10px;
   }
   div.overlay-menu ul {
     top: 1%;
@@ -468,37 +480,36 @@ button {
   content: "Politics";
 }
 
-.products-new {
+.products {
   width: 100%;
   height: 437px;
   margin-bottom: 40px;
-  margin-top: 60px;
-  position: relative;
+  margin-top: 130px;
 }
-.products-new__container {
+.products__container {
   width: 1200px;
   height: 100%;
   margin: auto;
-  overflow: hidden;
+  position: relative;
 }
-.products-new__container a {
+.products__container a {
   color: rgb(36, 36, 36);
 }
-.products-new__container .card {
+.products__container .card {
   width: 100%;
   height: 100%;
 }
-.products-new__container .card .img-item {
+.products__container .card .img-item {
   width: 100%;
   height: 324px;
 }
-.products-new__container .card .img-item img {
+.products__container .card .img-item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.products-new__container .card .title-item {
+.products__container .card .title-item {
   width: 100%;
   height: 113px;
   display: -webkit-box;
@@ -515,7 +526,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.products-new__container .card .title-item .name {
+.products__container .card .title-item .name {
   font-size: 24px;
   font-family: "Abhaya Libre", serif;
   font-weight: 600;
@@ -523,47 +534,75 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.products-new__container .card .title-item .price,
-.products-new__container .card .title-item .author {
+.products__container .card .title-item .price,
+.products__container .card .title-item .author {
   font-size: 16px;
   font-family: "Inter", sans-serif;
   color: #A39D9D;
 }
-.products-new__container .card .title-item .name, .products-new__container .card .title-item .price, .products-new__container .card .title-item .author {
+.products__container .card .title-item .name, .products__container .card .title-item .price, .products__container .card .title-item .author {
   padding-top: 5px;
 }
-.products-new__container .owl-nav button.owl-prev,
-.products-new__container .owl-nav button.owl-next {
+.products__container .owl-nav button.owl-prev,
+.products__container .owl-nav button.owl-next {
   width: 30px;
   height: 30px;
   background-color: #BBA59E;
   font-family: "Inter", sans-serif;
 }
-.products-new__container .owl-nav button.owl-prev span,
-.products-new__container .owl-nav button.owl-next span {
+.products__container .owl-nav button.owl-prev span,
+.products__container .owl-nav button.owl-next span {
   font-size: 24px;
   color: #fff;
 }
-.products-new__container .owl-nav button.owl-prev {
+.products__container .owl-nav button.owl-prev {
   position: absolute;
   top: 35%;
   left: 0;
 }
-.products-new__container .owl-nav button.owl-next {
+.products__container .owl-nav button.owl-next {
   position: absolute;
   top: 35%;
   right: 0;
 }
-.products-new::before, .products-new::after {
-  position: relative;
-  top: -10%;
+.products__container::before, .products__container::after {
+  position: absolute;
   color: rgb(36, 36, 36);
   font-family: "Abhaya Libre", serif;
   font-weight: 600;
 }
-.products-new::before {
-  content: "before";
-  left: 20%;
+.products__container::before {
+  content: "";
+  top: -7%;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  display: inline-block;
+  background-color: rgb(36, 36, 36);
+}
+.products__container::after {
+  content: "New book from Vintage";
+  left: 3%;
+  top: -43px;
+  display: inline-block;
+  color: rgb(36, 36, 36);
+  font-size: 24px;
+}
+
+.products-bestselling .products__container::after {
+  content: "Bestselling from Vintage";
+}
+
+.products-bestselling .products__container::before {
+  height: 2px;
+}
+
+.products-sale .products__container::after {
+  content: "Sale from Vintage";
+}
+
+.products-sale .products__container::before {
+  height: 1px;
 }
 
 .overlay-menu {
