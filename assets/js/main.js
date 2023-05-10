@@ -3,6 +3,10 @@ const form = document.querySelector('.form');
 const input = document.querySelector('#search-input');
 const iconSearch = document.querySelector('.search-icon');
 
+document.addEventListener('click', (event) => {
+    const isClickInside = input.contains(event.target) || iconSearch.contains(event.target);
+    if(!isClickInside) {input.classList.remove('active-search-icon');}
+});
 iconSearch.addEventListener('click', () => {
     input.classList.toggle("active-search-icon")
 });
