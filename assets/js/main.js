@@ -20,7 +20,7 @@ form.addEventListener('submit', () => {
         alert("Please enter name of books");
     }
 });
-// Them bam vao window thi dong search
+
 
 // Header-scroll
 const headerScroll = document.querySelector('.header');
@@ -43,7 +43,7 @@ closeOverlay.addEventListener('click', ()=> {
 });
 
 // product-slider
-$('.owl-carousel').owlCarousel({
+const productCarousel = $('.products__container > .owl-carousel').owlCarousel({
     loop:true,
     margin:20,
     nav:true,
@@ -66,6 +66,23 @@ $('.owl-carousel').owlCarousel({
         },
         1200:{
             items:5
+        }
+    }
+});
+
+const eventCarousel = $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
         }
     }
 })

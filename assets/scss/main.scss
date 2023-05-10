@@ -383,15 +383,38 @@ $background-color: #BBA59E;
 
     }
 }
-.products-bestselling .products__container::after {content:"Bestselling from Vintage"}
-.products-bestselling .products__container::before {height: 2px;}
-.products-bestselling {margin-top: 80px;}
-.products-sale .products__container::after {content:"Sale from Vintage"}
-.products-sale .products__container::before {height: 1px;}
-.products-sale {margin-top: 80px;}
+.products-new {
+    .products__container::before {height: 2.5px;}
+}
+.products-bestselling {
+    margin-top: 80px;
+    .products__container {
+        &::after {content: "Bestselling from Vintage";}
+        &::before {height: 2px;}
+    }
+}
+.products-sale {
+    margin-top: 80px;
+    .products__container {
+        &::after {content: "Sale from Vintage";} 
+        &::before {height: 2px;} 
+    }
+}
 // Product-new/End
 
-
+// Events/Start
+.events {
+    width: 100%;
+    background-color: violet;
+    margin-top: 80px;
+    &__container {
+        width: 1200px;
+        height: 100%;
+        margin: auto;
+        position: relative;
+    }
+}
+// Events/End
 
 
 // Overlay-menu/Start
