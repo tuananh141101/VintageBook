@@ -160,6 +160,7 @@ $background-color: #BBA59E;
     top: 0;
     width: 100%;
     background-color: #fff;
+    z-index: 20;
 }
 // Header/End
 
@@ -277,7 +278,99 @@ $background-color: #BBA59E;
 // Product-new/Start 
 .products-new {
     width: 100%;
-    background-color: red;
+    height: 437px;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    position: relative;
+    &__container {
+        width: 1200px;
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+
+        a {color: $main-color-font;}
+
+        .card {
+            width: 100%;
+            height: 100%;
+
+            .img-item {
+                width: 100%;
+                height: 324px;
+                img {width: 100%;height: 100%;object-fit: cover;}
+            }
+            .title-item {
+                width: 100%;
+                height: 113px;
+                @include flex(flex,center,flex-start);
+                flex-direction: column;
+
+                .name {
+                    font-size: $big-font_size;
+                    font-family: $main-font;
+                    font-weight: 600;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                .price,
+                .author
+                {
+                    font-size: $small-font_size;
+                    font-family: $second-font;
+                    color: $second-color-font;
+                }
+
+                .name,.price,.author {padding-top: 5px;}
+
+            }
+
+        }
+
+        .owl-nav {
+
+            button.owl-prev,
+            button.owl-next {
+                width: 30px;
+                height: 30px;
+                background-color: $background-color;
+                font-family: $second-font;
+                span {
+                    font-size: $big-font_size;
+                    color: #fff;
+                }
+            }
+
+            button.owl-prev {
+                position: absolute;
+                top: 35%;
+                left: 0;
+            }
+
+            button.owl-next {
+                position: absolute;
+                top: 35%;
+                right: 0;
+            }
+
+        }
+
+    }
+
+    &::before,
+    &::after {
+        position: relative;
+        top: -10%;
+        color: $main-color-font;
+        font-family: $main-font;
+        font-weight: 600;
+    }
+
+    &::before {
+        content: "before";
+        left: 20%;
+    }
 }
 // Product-new/End
 
@@ -299,7 +392,7 @@ $background-color: #BBA59E;
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 2%;
+        top: 6%;
         left: 5%; 
 
         li {
@@ -334,7 +427,7 @@ $background-color: #BBA59E;
         font-size: 24px;
         position: absolute;
         right: 5%;
-        top: 3%;
+        top: 7%;
         &:hover {color: white;}
     }
 
@@ -342,5 +435,6 @@ $background-color: #BBA59E;
 .active-overlay {
     opacity: .9;
     visibility: visible;
+    z-index: 30;
 }
 // Overlay-menu/End

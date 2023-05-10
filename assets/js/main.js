@@ -7,6 +7,7 @@ iconSearch.addEventListener('click', () => {
     input.classList.toggle("active-search-icon")
 });
 
+
 form.addEventListener('submit', () => {
     const valueInput = input.value;
     if (valueInput && valueInput !== '') {
@@ -15,6 +16,7 @@ form.addEventListener('submit', () => {
         alert("Please enter name of books");
     }
 });
+// Them bam vao window thi dong search
 
 // Header-scroll
 const headerScroll = document.querySelector('.header');
@@ -36,3 +38,23 @@ closeOverlay.addEventListener('click', ()=> {
     overlayMenu.classList.remove('active-overlay');
 });
 
+// product-slider
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000: {
+            items:4
+        },
+        1200:{
+            items:5
+        }
+    }
+})
