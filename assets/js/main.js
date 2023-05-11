@@ -72,8 +72,12 @@ const productCarousel = $('.products__container > .owl-carousel').owlCarousel({
 
 const eventCarousel = $('.owl-carousel').owlCarousel({
     loop:true,
-    margin:10,
+    margin:20,
     nav:true,
+    dots:false,
+    // autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause: true,
     responsive:{
         0:{
             items:1
