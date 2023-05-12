@@ -76,6 +76,25 @@
   footer.footer .footer__container {
     width: 992px;
   }
+  footer.footer .footer__container .bottom .bottom__media {
+    width: 40%;
+  }
+  footer.footer .footer__container .bottom .bottom__media ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer.footer .footer__container .bottom .bottom__title {
+    width: 60%;
+  }
+  footer.footer .footer__container .bottom .bottom__title ul {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  footer.footer .footer__container .bottom .bottom__title ul li {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 992px) {
   header.header .header-container {
@@ -112,11 +131,14 @@
   footer.footer .footer__container {
     width: 768px;
   }
+  footer.footer .footer__container .bottom .bottom__title ul li:nth-child(1), footer.footer .footer__container .bottom .bottom__title ul li:nth-child(3), footer.footer .footer__container .bottom .bottom__title ul li:nth-child(5) {
+    font-size: 16px;
+  }
   div.overlay-menu ul {
-    top: 4%;
+    top: 2%;
   }
   div.overlay-menu p {
-    top: 5%;
+    top: 3%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -169,7 +191,7 @@
   }
   footer.footer .footer__container {
     width: 100%;
-    padding: 0 10px;
+    padding: 25px 10px;
   }
   footer.footer .footer__container .top {
     -webkit-box-orient: vertical;
@@ -179,9 +201,36 @@
   }
   footer.footer .footer__container .top__logo {
     width: 100%;
+    margin-bottom: 15px;
   }
   footer.footer .footer__container .top__menu {
     width: 100%;
+    margin-bottom: 25px;
+  }
+  footer.footer .footer__container .bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer.footer .footer__container .bottom .bottom__media {
+    width: 100%;
+  }
+  footer.footer .footer__container .bottom .bottom__media ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer.footer .footer__container .bottom .bottom__title {
+    width: 100%;
+  }
+  footer.footer .footer__container .bottom .bottom__title ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer.footer .footer__container .bottom .bottom__media {
+    margin-bottom: 10px;
   }
   div.overlay-menu ul {
     top: 1%;
@@ -242,6 +291,25 @@
   }
   section.categories .categories__container .item:nth-child(-n+10)::before {
     font-size: 14px;
+  }
+  section.events .events__container .owl-nav button.owl-prev,
+  section.events .events__container .owl-nav button.owl-next {
+    top: 29%;
+  }
+  footer.footer .footer__container .bottom .bottom__title ul li:nth-child(1), footer.footer .footer__container .bottom .bottom__title ul li:nth-child(3), footer.footer .footer__container .bottom .bottom__title ul li:nth-child(5) {
+    font-size: 14px;
+  }
+  footer.footer .footer__container .top .top__logo .img-logo h2, footer.footer .footer__container .top .top__logo .img-logo p {
+    font-size: 16px;
+  }
+  footer.footer .footer__container .top .top__logo .content-logo ul li > a {
+    font-size: 16px;
+  }
+  footer.footer .footer__container .top .top__menu .content-menu ul li > a {
+    font-size: 16px;
+  }
+  footer.footer .footer__container .top .top__menu .info-menu p, footer.footer .footer__container .top .top__menu .info-menu span {
+    font-size: 16px;
   }
 }
 * {
@@ -537,6 +605,11 @@ button {
   font-size: 16px;
   color: rgb(36, 36, 36);
 }
+@media (max-width:992px) {
+  .categories__container .item::before {
+    font-size: 14px;
+  }
+}
 .categories__container .item:nth-child(2)::before {
   content: "Biography";
 }
@@ -790,6 +863,11 @@ button {
   height: 55.333%;
   display: inline-block;
 }
+@media (max-width:992px) {
+  .events__container .card-events .content-item p {
+    font-size: 14px;
+  }
+}
 @media (max-width:480px) {
   .events__container .card-events .content-item p {
     font-size: 14px;
@@ -877,7 +955,7 @@ button {
   font-family: rgb(36, 36, 36);
   color: rgb(36, 36, 36);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .mail__container .bottom {
   width: 100%;
@@ -970,6 +1048,7 @@ button {
   color: #fff;
   font-family: "Abhaya Libre", serif;
   font-size: 24px;
+  padding-bottom: 10px;
 }
 .footer__container .top__logo .img-logo a {
   color: rgb(36, 36, 36);
@@ -1101,7 +1180,9 @@ button {
 .footer__container .bottom__title ul li {
   font-family: rgb(36, 36, 36);
   font-size: 20px;
+  color: #fff;
   margin-left: 10px;
+  text-align: center;
 }
 .footer__container .bottom__title ul li:nth-child(2), .footer__container .bottom__title ul li:nth-child(4) {
   font-size: 5px;
