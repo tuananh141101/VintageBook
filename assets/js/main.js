@@ -75,8 +75,8 @@ const eventCarousel = $('.owl-carousel').owlCarousel({
     margin:20,
     nav:true,
     dots:false,
-    // autoplay:true,
-    autoplayTimeout:4000,
+    autoplay:true,
+    autoplayTimeout:3500,
     autoplayHoverPause: true,
     responsive:{
         0:{
@@ -89,4 +89,6 @@ const eventCarousel = $('.owl-carousel').owlCarousel({
             items:2
         }
     }
-})
+});
+
+// SignUpMail

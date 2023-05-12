@@ -443,9 +443,9 @@ button {
   width: 100%;
   margin-top: 30px;
   margin-bottom: 20px;
-  border-top: 1px solid #E8DBDB;
   padding-top: 30px;
-  padding-bottom: 30px;
+  background-color: #f3f0ef;
+  padding-bottom: 51px;
 }
 .categories__container {
   width: 1200px;
@@ -654,6 +654,12 @@ button {
   height: 2px;
 }
 
+.overlay-events {
+  background-color: #f3f0ef;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
 .events {
   width: 100%;
   margin-top: 80px;
@@ -736,7 +742,7 @@ button {
   outline: none;
   font-size: 16px;
   color: rgb(36, 36, 36);
-  background-color: #fff;
+  background-color: transparent;
   cursor: pointer;
   width: 100%;
   height: 13.334%;
@@ -792,6 +798,82 @@ button {
   display: inline-block;
   color: rgb(36, 36, 36);
   font-size: 24px;
+}
+
+.mail {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.mail__container {
+  width: 1200px;
+  margin: auto;
+}
+.mail__container .top {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  padding-top: 50px;
+}
+.mail__container .top h2 {
+  font-family: rgb(36, 36, 36);
+  color: rgb(36, 36, 36);
+  font-size: 24px;
+  font-weight: 600;
+}
+.mail__container .bottom {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+.mail__container .bottom input {
+  border: none;
+  outline: none;
+  width: 30%;
+  padding: 8px 12px;
+  font-family: "Abhaya Libre", serif;
+  font-size: 20px;
+  border: 2px solid #A39D9D;
+  color: rgb(36, 36, 36);
+  border-radius: 3px;
+}
+.mail__container .bottom input::-webkit-input-placeholder {
+  font-family: "Abhaya Libre", serif;
+  color: #A39D9D;
+  font-size: 20px;
+}
+.mail__container .bottom input::-moz-placeholder {
+  font-family: "Abhaya Libre", serif;
+  color: #A39D9D;
+  font-size: 20px;
+}
+.mail__container .bottom input:-ms-input-placeholder {
+  font-family: "Abhaya Libre", serif;
+  color: #A39D9D;
+  font-size: 20px;
+}
+.mail__container .bottom input::-ms-input-placeholder {
+  font-family: "Abhaya Libre", serif;
+  color: #A39D9D;
+  font-size: 20px;
+}
+.mail__container .bottom input::placeholder {
+  font-family: "Abhaya Libre", serif;
+  color: #A39D9D;
+  font-size: 20px;
+}
+.mail__container .bottom button {
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  background-color: #BBA59E;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: 2px solid #BBA59E;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .overlay-menu {

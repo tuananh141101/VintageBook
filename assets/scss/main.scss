@@ -240,9 +240,9 @@ $background-color: #BBA59E;
     width: 100%;
     margin-top: 30px;
     margin-bottom: 20px;
-    border-top: 1px solid #E8DBDB;
     padding-top: 30px;
-    padding-bottom: 30px;
+    background-color: #f3f0ef;
+    padding-bottom: 51px;
     
     &__container {
         width: 1200px;
@@ -420,6 +420,11 @@ $background-color: #BBA59E;
 // Product-new/End
                                                         
 // Events/Start
+.overlay-events {
+    background-color: #f3f0ef;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
 .events {
     width: 100%;
     margin-top: 80px;
@@ -478,7 +483,7 @@ $background-color: #BBA59E;
                     outline: none;
                     font-size: $small-font_size;
                     color: $main-color-font;
-                    background-color: #fff;
+                    background-color: transparent;
                     cursor: pointer;
                     width: 100%;
                     height: 13.334%;
@@ -548,6 +553,71 @@ $background-color: #BBA59E;
 }
 // Events/End
 
+// SignUpMail/Start
+.mail {
+    width: 100%;
+    margin-bottom: 100px;
+    &__container {
+        width: 1200px;
+        // background-color: red;
+        margin: auto;
+
+        .top {
+            width: 100%;
+            height: 30%;
+            // background-color: violet;
+            text-align: center;
+            padding-top: 50px;
+            h2 {
+                font-family: $main-color-font;
+                color: $main-color-font;
+                font-size: $big-font_size;
+                font-weight: 600;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            text-align: center;
+            padding-top: 20px;
+
+            input {
+                border: none;
+                outline: none;
+                width: 30%;
+                padding: 8px 12px;
+                font-family: $main-font;
+                font-size: $normal-font_size;
+                border: 2px solid $second-color-font;
+                color: $main-color-font;
+                border-radius: 3px;
+                &::placeholder {
+                    font-family: $main-font;
+                    color: $second-color-font;
+                    font-size: $normal-font_size;
+                }
+            }
+
+            button {
+                border: none;
+                outline: none;
+                padding: 8px 12px;
+                background-color: #BBA59E;
+                color: #fff;
+                font-size: $smallest-font_size;
+                font-family: $second-font;
+                margin-left: 10px;
+                border-radius: 3px;
+                border: 2px solid $background-color;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+
+        }
+
+    }
+}
+// SignUpMail/End
 
 // Overlay-menu/Start
 .overlay-menu {
