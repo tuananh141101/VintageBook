@@ -50,6 +50,9 @@
     padding-top: 5px;
     padding-bottom: 5px;
   }
+  section.categories {
+    overflow-x: hidden;
+  }
   section.categories .categories__container {
     width: 992px;
     overflow: auto;
@@ -181,6 +184,9 @@
   }
   section.banner .banner-container .banner-container__right {
     height: 60%;
+  }
+  section.categories .categories__container .item:nth-child(-n+10)::before {
+    font-size: 14px;
   }
 }
 * {

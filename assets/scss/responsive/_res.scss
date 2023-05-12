@@ -30,6 +30,7 @@
 
     // Categories
     section.categories {padding-top: 5px;padding-bottom: 5px;}
+    section.categories {overflow-x: hidden;}
     section.categories .categories__container {
         width: 992px;
         overflow: auto;
@@ -131,8 +132,12 @@
 }
 
 @media screen and (max-width:480px) {
+    // Banner
     section.banner .banner-container {
         .banner-container__left {height: 40%;}
         .banner-container__right {height: 60%;}
     }
+
+    // Categories
+    section.categories .categories__container .item:nth-child(-n + 10)::before {font-size: 14px;}
 }
