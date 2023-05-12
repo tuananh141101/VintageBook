@@ -701,6 +701,11 @@ button {
   height: 55.333%;
   display: inline-block;
 }
+@media (max-width:480px) {
+  .events__container .card-events .content-item p {
+    font-size: 14px;
+  }
+}
 .events__container .card-events .content-item button {
   border: none;
   outline: none;
