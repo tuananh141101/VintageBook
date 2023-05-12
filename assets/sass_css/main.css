@@ -558,11 +558,22 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
+@media (max-width:480px) {
+  .products__container .card .title-item .name {
+    font-size: 20px;
+  }
+}
 .products__container .card .title-item .price,
 .products__container .card .title-item .author {
   font-size: 16px;
   font-family: "Inter", sans-serif;
   color: #A39D9D;
+}
+@media (max-width:480px) {
+  .products__container .card .title-item .price,
+  .products__container .card .title-item .author {
+    font-size: 14px;
+  }
 }
 .products__container .card .title-item .name, .products__container .card .title-item .price, .products__container .card .title-item .author {
   padding-top: 5px;
@@ -690,6 +701,12 @@ button {
   height: 33.333%;
   display: inline-block;
 }
+@media (max-width:480px) {
+  .events__container .card-events .content-item h2 {
+    font-size: 20px;
+    height: 23.333%;
+  }
+}
 .events__container .card-events .content-item p {
   font-size: 16px;
   font-family: "Inter", sans-serif;
@@ -704,6 +721,8 @@ button {
 @media (max-width:480px) {
   .events__container .card-events .content-item p {
     font-size: 14px;
+    overflow-y: auto;
+    height: 65.333%;
   }
 }
 .events__container .card-events .content-item button {
@@ -717,6 +736,11 @@ button {
   height: 13.334%;
   display: inline-block;
   text-align: left;
+}
+@media (max-width:480px) {
+  .events__container .card-events .content-item button {
+    padding-top: 5px;
+  }
 }
 .events__container .owl-nav button.owl-prev,
 .events__container .owl-nav button.owl-next {
