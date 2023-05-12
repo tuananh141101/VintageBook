@@ -258,6 +258,10 @@
     font-size: 14px;
     letter-spacing: 0;
   }
+  section.products .products__container .owl-nav button.owl-prev,
+  section.products .products__container .owl-nav button.owl-next {
+    top: 33.6%;
+  }
   section.mail .mail__container .bottom {
     display: -webkit-box;
     display: -ms-flexbox;

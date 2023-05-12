@@ -188,6 +188,12 @@
         }
     }
 
+    // Product
+    section.products .products__container .owl-nav {
+        button.owl-prev,
+        button.owl-next {top:33.6%;}
+    }
+
     // SignUpMail
     section.mail .mail__container .bottom {
         display: flex;
