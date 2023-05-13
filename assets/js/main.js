@@ -1,3 +1,26 @@
+// Call API
+const API_URL = 'https://websitebook-api.vercel.app/products';
+async function callAPI(API_URL) {
+    const response = await axios.get(API_URL);
+    const data = response.data;
+
+    showBookItem(data);
+};
+callAPI(API_URL);
+
+
+function showBookItem(data) {
+    data.sort(() => Math.random() - 0.5); /*Random data*/
+    let html = ``; 
+    const IMG_PATH = `https://websitebook-api.vercel.app`;
+    let count = 0; /*chi lap den 12 phan tu*/
+
+    const productItem = document.querySelectorAll('.products .card');
+    console.log(productItem);
+}
+
+
+
 // Search-icon 
 const form = document.querySelector('.form');
 const input = document.querySelector('#search-input');

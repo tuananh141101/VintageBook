@@ -1,4 +1,4 @@
-@import 'responsive/res.scss';
+@use 'responsive/res.scss';
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 // font-family: 'Abhaya Libre', serif;
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap');
@@ -131,6 +131,7 @@ $background-color: #BBA59E;
                                 text-align: left;
                                 transition: all .4s;
                                 font-family: $second-font;
+                                border-radius: 3px;
                             }
 
                             .active-search-icon {

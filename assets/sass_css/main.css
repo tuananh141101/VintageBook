@@ -464,6 +464,7 @@ button {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   font-family: "Inter", sans-serif;
+  border-radius: 3px;
 }
 .header .header-container__menu .sub-menu ul li:nth-child(6) .active-search-icon {
   width: 150px;
