@@ -1,0 +1,9 @@
+.book-type {
+    width: 100%;
+    background-color: violet;
+    &__container {
+        width: 1200px;
+        background-color: red;
+        margin: auto;
+    }
+}

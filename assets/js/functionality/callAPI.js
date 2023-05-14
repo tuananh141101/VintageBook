@@ -1,13 +1,9 @@
-// Callapi book
-// const API_URL = "https://websitebook-api.vercel.app/products"; 
-// export async function callAPI(API_URL) {
-//     const response = await axios.get(API_URL);
-//     const data = response.data;
-//     showBookItem(data);
-// };
-// callAPI(API_URL);
+export const PI = 3.14;
 
-// function callAPI(log, type = 'log') {
-//     console[type](log);
-// }
-// export default callAPI;
+export function double(x) {
+  return x * 2;
+}
+
+export function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}

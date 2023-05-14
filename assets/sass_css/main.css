@@ -316,6 +316,16 @@
     font-size: 16px;
   }
 }
+.book-type {
+  width: 100%;
+  background-color: violet;
+}
+.book-type__container {
+  width: 1200px;
+  background-color: red;
+  margin: auto;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -1206,7 +1216,7 @@ button {
   width: 100%;
   height: 1060px;
   background-color: #000;
-  opacity: 0.8;
+  opacity: 0;
   visibility: hidden;
   position: fixed;
   top: 0;
