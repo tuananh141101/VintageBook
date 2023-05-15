@@ -21,6 +21,7 @@ $breakpoints: (
         @error "Breakpoints loi"
     } 
 }
+
 /*----------ROOT----------*/ 
 
 // Font-family
@@ -42,7 +43,6 @@ $second-color-font: #A39D9D;
 $background-color: #BBA59E;
 
 /*----------ROOT----------*/ 
-// header
 
 
 // Booktype/Start
@@ -235,10 +235,18 @@ $background-color: #BBA59E;
         .tab-revie {
             width: 100%;
             background-color: blue;
-            visibility: visible;
+            visibility: hidden;
         }
 
 
     }
 }
 // Information/End
+
+// productdetailpage/Start
+section.productDetailPage {
+    margin-top: 30px;
+    margin-bottom: 0;
+    .products__container::after {content: "You also may like";}
+}
+// productdetailpage/End

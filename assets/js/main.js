@@ -31,11 +31,12 @@ window.addEventListener('scroll', () => {
 
 // Header-currentpage-active
 const tabLinks = document.querySelectorAll('.tablinks');
-
 for (let i = 0;i < tabLinks.length; i++) {
     console.log(tabLinks[i]);
 
     tabLinks[i].addEventListener('click', (e) => {
+        e.preventDefault;
+        
         let currentLi = e.target;
         tabLinks.forEach((item) => {
             item.classList.remove("active-current");

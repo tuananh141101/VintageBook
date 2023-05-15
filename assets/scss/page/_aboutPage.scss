@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+// font-family: 'Abhaya Libre', serif;
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap');
+// font-family: 'Inter', sans-serif;
+@mixin flex($display,$alignitem,$justifycontent) {
+    display: $display;
+    align-items: $alignitem;
+    justify-content: $justifycontent;
+}
+$breakpoints: (
+    "phone": "max-width:480px",
+    "tablet-portrait": "max-width:768px",
+    "tablet-lanscape": "max-width:992px",
+    "laptop": "max-width:1200px",
+);
+@mixin breakpoint($user-value) {
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map {
+        @media (#{$my-map}) {@content}
+    } @else {
+        @error "Breakpoints loi"
+    } 
+}
+
+/*----------ROOT----------*/ 
+
+// Font-family
+$main-font: 'Abhaya Libre', serif;
+$second-font: 'Inter', sans-serif;
+// Font-family
+
+// Font-size
+$big-font_size: 24px;
+$normal-font_size: 20px;
+$small-font_size: 16px;
+$smallest-font_size: 14px;
+// Font-size
+
+// Color
+$main-color-font: rgb(36, 36, 36);
+$active-color-font: #C6322F;
+$second-color-font: #A39D9D;
+$background-color: #BBA59E;
+
+/*----------ROOT----------*/ 
+
+// about/Start
+.about {
+    width: 100%;
+    background-color: red;
+    &__container {
+        width: 1200px;
+        background-color: blueviolet;
+        margin: 0 auto;
+    }
+}
+// about/End
