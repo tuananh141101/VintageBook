@@ -43,8 +43,7 @@ $background-color: #BBA59E;
 
 /*----------ROOT----------*/ 
 // header
-header .header-container .header-container__menu .sub-menu ul li:nth-child(2) a { color: $active-color-font;}
-header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a { color: $main-color-font;}
+
 
 // Booktype/Start
 .book-type {
@@ -202,6 +201,7 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
         ul {
             width: 100%;
             @include flex(flex,center,flex-start);
+            margin-bottom: 15px;
             li {
                 font-family: $main-font;
                 color:$main-color-font;
@@ -216,6 +216,7 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
             width: 100%;
             // background-color: rgb(187, 171, 171);
             visibility: visible;
+            margin-bottom: 30px;
             table {
                 width: 100%;
                 border-collapse: collapse;

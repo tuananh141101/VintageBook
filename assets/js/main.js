@@ -29,6 +29,26 @@ window.addEventListener('scroll', () => {
     headerScroll.classList.add("active-header-scroll");
 });
 
+// Header-currentpage-active
+const tabLinks = document.querySelectorAll('.tablinks');
+
+for (let i = 0;i < tabLinks.length; i++) {
+    console.log(tabLinks[i]);
+
+    tabLinks[i].addEventListener('click', (e) => {
+        let currentLi = e.target;
+        tabLinks.forEach((item) => {
+            item.classList.remove("active-current");
+        });
+        currentLi.classList.add("active-current");
+        console.log(currentLi); 
+    });
+};
+
+
+
+
+
 // Overlay-menu
 const overlayMenu = document.querySelector('.overlay-menu');
 const barIcon = document.querySelector('.bars-icon');

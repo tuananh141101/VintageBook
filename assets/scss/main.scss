@@ -116,7 +116,7 @@ $background-color: #BBA59E;
                             font-family: $second-font;
                             color: $main-color-font;
                         }
-                        a.home {color: $active-color-font;}
+                        .active-current {color: $active-color-font;}
 
                         &:nth-child(6) {
                             position: relative;
@@ -157,7 +157,6 @@ $background-color: #BBA59E;
                         &:last-child {padding: 0;}
 
                     }
-
 
                     li.bars-icon {
                         display: none;
