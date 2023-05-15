@@ -67,6 +67,9 @@
 
     // Productview
     section.product-view .product-view__container {width: 992px;}
+
+    // Information
+    section.information .information__container {width: 992px;}
 }
 
 
@@ -112,6 +115,9 @@
     section.book-type .book-type__container {width: 768px;}
 
     section.product-view .product-view__container {width: 768px;}
+
+    // Information
+    section.information .information__container {width: 768px;}
 }
 
 
@@ -194,6 +200,11 @@
 
     section.product-view .product-view__container .view-media {width: 100%;height: 557.25px;}
     section.product-view .product-view__container .view-detail {width: 100%;padding-left: 0;}
+
+    // Information
+    section.information .information__container {width: 100%; padding: 0 10px;}
+
+    section.information .information__container .tab-addInfo table tbody tr td:first-child {width: 50%;};
 }
 
 
@@ -275,5 +286,10 @@
 
     // productview
     section.product-view .product-view__container .view-media {width: 100%;height: 343.50px;}
+
+    // infomation
+    section.information .information__container .tab-addInfo table tbody tr td {font-size: 14px;p{font-size: 14px}};
+
+    section.information .information__container ul li {font-size: 20px;}
 
 }

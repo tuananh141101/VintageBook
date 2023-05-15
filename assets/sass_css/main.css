@@ -103,6 +103,9 @@
   section.product-view .product-view__container {
     width: 992px;
   }
+  section.information .information__container {
+    width: 992px;
+  }
 }
 @media screen and (max-width: 992px) {
   header.header .header-container {
@@ -152,6 +155,9 @@
     width: 768px;
   }
   section.product-view .product-view__container {
+    width: 768px;
+  }
+  section.information .information__container {
     width: 768px;
   }
 }
@@ -272,6 +278,13 @@
     width: 100%;
     padding-left: 0;
   }
+  section.information .information__container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  section.information .information__container .tab-addInfo table tbody tr td:first-child {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 500px) {
   section.banner {
@@ -353,6 +366,15 @@
     width: 100%;
     height: 343.5px;
   }
+  section.information .information__container .tab-addInfo table tbody tr td {
+    font-size: 14px;
+  }
+  section.information .information__container .tab-addInfo table tbody tr td p {
+    font-size: 14px;
+  }
+  section.information .information__container ul li {
+    font-size: 20px;
+  }
 }
 /*----------ROOT----------*/
 /*----------ROOT----------*/
@@ -407,7 +429,7 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
 
 .product-view {
   width: 100%;
-  margin-bottom: 500px;
+  margin-bottom: 40px;
 }
 .product-view__container {
   width: 1200px;
@@ -451,8 +473,13 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
   font-family: "Abhaya Libre", serif;
   padding-bottom: 25px;
 }
+@media (max-width:480px) {
+  .product-view__container .view-detail .content-detail h1 {
+    font-size: 38px;
+  }
+}
 .product-view__container .view-detail .content-detail p {
-  font-size: "Inter", sans-serif;
+  font-size: 16px;
   color: rgb(36, 36, 36);
   font-family: "Inter", sans-serif;
   line-height: 20px;
@@ -460,6 +487,11 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
 }
 .product-view__container .view-detail .content-detail p span {
   color: #A39D9D;
+}
+@media (max-width:480px) {
+  .product-view__container .view-detail .content-detail p {
+    font-size: 14px;
+  }
 }
 .product-view__container .view-detail .content-detail p.description {
   padding-bottom: 20px;
@@ -471,6 +503,11 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
   font-size: 24px;
   font-family: "Abhaya Libre", serif;
   padding-bottom: 20px;
+}
+@media (max-width:480px) {
+  .product-view__container .view-detail .content-detail p.price {
+    font-size: 20px;
+  }
 }
 .product-view__container .view-detail .content-detail p.share {
   font-size: 16px;
@@ -502,6 +539,11 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
   border-radius: 3px;
   color: #fff;
 }
+@media (max-width:480px) {
+  .product-view__container .view-detail .content-detail form input {
+    font-size: 14px;
+  }
+}
 .product-view__container .view-detail .content-detail form .quantity {
   margin-right: 20px;
 }
@@ -519,6 +561,11 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
   color: #fff;
   background-color: #BBA59E;
   cursor: pointer;
+}
+@media (max-width:480px) {
+  .product-view__container .view-detail .content-detail form .addCart {
+    font-size: 20px;
+  }
 }
 .product-view__container .view-detail .content-detail ul.share-media {
   display: -webkit-box;
@@ -538,6 +585,65 @@ header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a 
   color: rgb(36, 36, 36);
   font-family: "Inter", sans-serif;
   font-size: 16px;
+}
+@media (max-width:480px) {
+  .product-view__container .view-detail .content-detail ul.share-media li a {
+    font-size: 14px;
+  }
+}
+
+.information {
+  width: 100%;
+}
+.information__container {
+  width: 1200px;
+  margin: auto;
+}
+.information__container ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.information__container ul li {
+  font-family: "Abhaya Libre", serif;
+  color: rgb(36, 36, 36);
+  font-size: 24px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.information__container ul li:last-child {
+  color: #A39D9D;
+}
+.information__container .tab-addInfo {
+  width: 100%;
+  visibility: visible;
+}
+.information__container .tab-addInfo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.information__container .tab-addInfo table td {
+  border-bottom: 1px solid #ebe8e8;
+  text-align: left;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: rgb(36, 36, 36);
+  padding: 10px 0;
+}
+.information__container .tab-addInfo table td:first-child {
+  width: 25%;
+}
+.information__container .tab-revie {
+  width: 100%;
+  background-color: blue;
+  visibility: visible;
 }
 
 * {
