@@ -78,6 +78,9 @@
     section.about .about__container .bottom .bottom__img {height: 372px;}
 
     section.about .about__container::after {left: 4%;top: -64px;}
+
+    // Events
+    section.eventsProduct .eventsProduct__container {width: 992px;}
 }
 
 
@@ -159,6 +162,8 @@
     section.about .about__container::before {top: -3%;}
     section.about .about__container::after {left: 5%;}
 
+    // Events
+    section.eventsProduct .eventsProduct__container {width: 768px;}
 }
 
 
@@ -252,6 +257,10 @@
 
     section.about .about__container::before {display: none;}
     section.about .about__container::after {left: 0;padding-left: 10px;}
+
+    // Events
+    section.eventsProduct .eventsProduct__container {width: 100%;padding: 0 10px;}
+ 
 }
 
 
