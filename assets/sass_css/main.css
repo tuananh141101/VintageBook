@@ -4,6 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
+/*----------ROOT----------*/
+/*----------ROOT----------*/
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
 @media screen and (max-width: 1200px) {
@@ -872,16 +874,12 @@ section.productDetailPage .products__container::after {
   font-size: 24px;
 }
 
-/*----------ROOT----------*/
-/*----------ROOT----------*/
 .eventsProduct {
   width: 100%;
   margin-top: 130px;
-  background-color: red;
 }
 .eventsProduct__container {
   width: 1200px;
-  background-color: blue;
   margin: auto;
   position: relative;
   display: grid;
@@ -907,7 +905,7 @@ section.productDetailPage .products__container::after {
 }
 .eventsProduct__container::before {
   content: "";
-  top: -165%;
+  top: -31px;
   left: 0;
   width: 28px;
   height: 2px;
@@ -939,12 +937,14 @@ section.productDetailPage .products__container::after {
 }
 @media (max-width:768px) {
   .eventsProduct__container::after {
-    left: 0%;
+    left: 0;
     padding-left: 10px;
   }
 }
 .eventsProduct__container .cardEvents {
-  background-color: rgb(74, 45, 45);
+  background-color: #f3f0ef;
+  overflow: hidden;
+  border-radius: 3px;
 }
 .eventsProduct__container .cardEvents img {
   width: 100%;
@@ -965,6 +965,11 @@ section.productDetailPage .products__container::after {
 @media (max-width:768px) {
   .eventsProduct__container .cardEvents img {
     height: 557.25px;
+  }
+}
+@media (max-width:480px) {
+  .eventsProduct__container .cardEvents img {
+    height: 339px;
   }
 }
 .eventsProduct__container .cardEvents .title {

@@ -58,11 +58,41 @@ $background-color: #BBA59E;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         @include breakpoint(tablet-lanscape) {grid-template-columns: 1fr 1fr;}
-        @include breakpoint(tablet-portrait) {grid-template-columns: 1fr;}
+        @include breakpoint(tablet-portrait) {grid-template-columns:1fr;}
+
+        &::before,
+        &::after {
+            position: absolute;
+            color: $main-color-font;
+            font-family: $main-font;
+            font-weight: 600;
+        }
+        &::before {
+            content: "";
+            top: -31px;
+            left: 0;
+            width: 28px;
+            height: 2px;
+            display: inline-block;
+            background-color: $main-color-font;
+            @include breakpoint(tablet-portrait) {display: none;}
+        }
+        &::after {
+            content: "Events";
+            left: 3%;
+            top: -43px;
+            display: inline-block;
+            color: $main-color-font;
+            font-size: $big-font_size;
+            @include breakpoint(laptop) {left: 4%;}
+            @include breakpoint(tablet-lanscape) {left: 5%;}
+            @include breakpoint(tablet-portrait) {left: 0;padding-left: 10px;}
+        }
 
         .cardEvents {
-            background-color: rgb(74, 45, 45);
-
+            background-color:#f3f0ef;
+            overflow: hidden;
+            border-radius: 3px;
             img {
                 width: 100%;
                 height: 289.50px;
@@ -70,7 +100,9 @@ $background-color: #BBA59E;
                 @include breakpoint(laptop) {height: 237.75px;}
                 @include breakpoint(tablet-lanscape) {height: 280.50px;}
                 @include breakpoint(tablet-portrait) {height: 557.25px;}
-                @include breakpoint(tablet-phone) {height: 339px;}
+                @include breakpoint(phone) {
+                    height: 339px;
+                }
             }
 
             .title {
