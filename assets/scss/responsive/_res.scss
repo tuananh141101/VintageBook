@@ -70,6 +70,14 @@
 
     // Information
     section.information .information__container {width: 992px;}
+
+    // About
+    section.about .about__container {width: 992px;}
+
+    section.about .about__container .top .top__img {height: 372px;}
+    section.about .about__container .bottom .bottom__img {height: 372px;}
+
+    section.about .about__container::after {left: 4%;top: -64px;}
 }
 
 
@@ -118,6 +126,39 @@
 
     // Information
     section.information .information__container {width: 768px;}
+
+    // About
+    section.about .about__container {width: 768px;}
+    section.about .about__container .top {
+        flex-direction: column-reverse;
+        .top__text {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .top__img {
+            width: 100%;
+            height: 576px;
+            margin-bottom: 20px;
+        }
+    }
+    section.about .about__container .bottom {
+        flex-direction: column;
+        .bottom__text {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .bottom__img {
+            width: 100%;
+            height: 576px;
+            margin-bottom: 20px;
+        }
+    }
+
+    section.about .about__container::before {top: -3%;}
+    section.about .about__container::after {left: 5%;}
+
 }
 
 
@@ -205,6 +246,12 @@
     section.information .information__container {width: 100%; padding: 0 10px;}
 
     section.information .information__container .tab-addInfo table tbody tr td:first-child {width: 50%;};
+
+    // About
+    section.about .about__container {width: 100%; padding: 0 10px;}
+
+    section.about .about__container::before {display: none;}
+    section.about .about__container::after {left: 0;padding-left: 10px;}
 }
 
 
@@ -292,4 +339,9 @@
 
     section.information .information__container ul li {font-size: 20px;}
 
+    // About
+    section.about .about__container .top .top__img {height: 339px;}
+    section.about .about__container .top .top__text p {font-size: 14px;}
+    section.about .about__container .bottom .bottom__img {height: 339px;}
+    section.about .about__container .bottom .bottom__text p {font-size: 14px;}
 }

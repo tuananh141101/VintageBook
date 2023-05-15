@@ -47,11 +47,118 @@ $background-color: #BBA59E;
 // about/Start
 .about {
     width: 100%;
-    background-color: red;
+    margin-top: 130px;
+    margin-bottom: 50px;
     &__container {
         width: 1200px;
-        background-color: blueviolet;
         margin: 0 auto;
+        position: relative;
+
+        .top {
+            width: 100%;
+            @include flex(flex,center,center);
+
+            &__text {
+                width: 50%;
+                padding-right: 30px;
+
+                h2 {
+                    font-size: 54px;
+                    font-family: $main-font;
+                    color: $main-color-font;
+                    span {color: $second-color-font;}
+                    padding-bottom: 15px;
+                    @include breakpoint(laptop) {font-size: 44px;}
+                }
+
+                p {
+                    font-size: $small-font_size;
+                    font-family: $second-font;
+                    color: $main-color-font;
+                    letter-spacing: 1px;
+                }
+
+            }
+
+            &__img {
+                width: 50%;
+                height: 450px;
+                background-color: yellow;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 17;
+                }
+
+            }
+
+        }
+
+        .bottom {
+            width: 100%;
+            @include flex(flex,center,center);
+
+            &__text {
+                width: 50%;
+                padding-left: 30px;
+                h2 {
+                    font-size: 54px;
+                    font-family: $main-font;
+                    color: $main-color-font;
+                    span {color: $second-color-font;}
+                    padding-bottom: 15px;
+                    text-align: right;
+                    @include breakpoint(laptop) {font-size: 44px;}
+                }
+
+                p {
+                    font-size: $small-font_size;
+                    font-family: $second-font;
+                    color: $main-color-font;
+                    letter-spacing: 1px;
+                    text-align: right;
+                }
+            }
+
+            &__img {
+                width: 50%;
+                height: 450px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 17;
+                }
+            }
+
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            color: $main-color-font;
+            font-family: $main-font;
+            font-weight: 600;
+        }
+        &::before {
+            content: "";
+            top: -7%;
+            left: 0;
+            width: 28px;
+            height: 2px;
+            display: inline-block;
+            background-color: $main-color-font;
+        }
+        &::after {
+            content: "About Us";
+            left: 3%;
+            top: -75px;
+            display: inline-block;
+            color: $main-color-font;
+            font-size: $big-font_size;
+        }
+
     }
 }
 // about/End
