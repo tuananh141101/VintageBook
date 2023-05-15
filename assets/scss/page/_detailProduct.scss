@@ -1,9 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+// font-family: 'Abhaya Libre', serif;
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap');
+// font-family: 'Inter', sans-serif;
+@mixin flex($display,$alignitem,$justifycontent) {
+    display: $display;
+    align-items: $alignitem;
+    justify-content: $justifycontent;
+}
+$breakpoints: (
+    "phone": "max-width:480px",
+    "tablet-portrait": "max-width:768px",
+    "tablet-lanscape": "max-width:992px",
+    "laptop": "max-width:1200px",
+);
+@mixin breakpoint($user-value) {
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map {
+        @media (#{$my-map}) {@content}
+    } @else {
+        @error "Breakpoints loi"
+    } 
+}
+/*----------ROOT----------*/ 
+
+// Font-family
+$main-font: 'Abhaya Libre', serif;
+$second-font: 'Inter', sans-serif;
+// Font-family
+
+// Font-size
+$big-font_size: 24px;
+$normal-font_size: 20px;
+$small-font_size: 16px;
+$smallest-font_size: 14px;
+// Font-size
+
+// Color
+$main-color-font: rgb(36, 36, 36);
+$active-color-font: #C6322F;
+$second-color-font: #A39D9D;
+$background-color: #BBA59E;
+
+/*----------ROOT----------*/ 
+// header
+header .header-container .header-container__menu .sub-menu ul li:nth-child(2) a { color: $active-color-font;}
+header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a { color: $main-color-font;}
+
+// Booktype/Start
 .book-type {
     width: 100%;
-    background-color: violet;
+    height: 20px;
+    padding: 30px 0;
     &__container {
         width: 1200px;
-        background-color: red;
+        height: 100%;
         margin: auto;
+        ul {
+            width: 100%;
+            height: 100%;
+            @include flex(flex,center,flex-start);
+            li {
+                font-size: $small-font_size;
+                font-family: $second-font;
+                a,i {color: $second-color-font;}
+                i {font-size: 10px;}
+                &:last-child a {color: $main-color-font;}
+                &:nth-child(2),
+                &:nth-child(4) {padding-bottom: 10px;}
+                padding-right: 6px;
+            }
+        }
     }
 }
+// Booktype/End
+
+// Productview/Start
+.product-view {
+    width: 100%;
+    margin-bottom: 500px;
+    &__container {
+        width: 1200px;
+        margin: auto;
+        @include flex(flex,top,center);
+
+        .view-media {
+            width: 40%;
+            height: 640px;
+            .img-media {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border-radius: 3px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                img {width: 100%;height: 100%;object-fit: cover;}
+            }
+        }
+        .view-detail {
+            width: 60%;
+            overflow: hidden;
+            word-wrap: break-word;
+            padding-left: 40px;
+            .content-detail {
+                h1 {
+                    font-size: 48px;
+                    font-family: $main-font;
+                    padding-bottom: 25px;
+                }
+
+                p {
+                    font-size: $second-font;
+                    color: $main-color-font;
+                    font-family: $second-font;
+                    line-height: 20px;
+                    letter-spacing: 1px;
+                    span {color: $second-color-font;}
+                }
+
+                p.description {padding-bottom: 20px;}
+                p.category {padding-bottom: 20px;}
+                p.price {
+                    font-size: $big-font_size;
+                    font-family: $main-font;
+                    padding-bottom: 20px
+                }
+                p.share {
+                    font-size: $small-font_size;
+                    font-family: $main-font;
+                    color: $main-color-font; 
+                    padding-bottom:5px;
+                }
+
+                form {
+                    @include flex(flex,center,flex-start);
+                    padding-bottom: 30px;
+
+                    input {
+                        border: none;
+                        outline: none;
+                        padding: 10px;
+                        width: 60px;
+                        height: 40px;
+                        text-align: center;
+                        font-size: $small-font_size;
+                        background-color: $background-color;
+                        border-radius: 3px;
+                        color: #fff;
+                    }
+
+                    .quantity {margin-right: 20px;}
+                    
+                    .addCart {
+                        margin-right: 6px;
+                        outline: none;
+                        border: none;
+                        height: 40px;
+                        width: 150px;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: $big-font_size;
+                        font-family: $main-font;
+                        border-radius: 3px;
+                        color: #fff;
+                        background-color: $background-color;
+                        cursor:pointer;
+                    }
+
+                }
+
+                ul.share-media {
+                    @include flex(flex,center,flex-start);
+                    li {
+                        padding-right: 10px;
+                        a {
+                            color: $main-color-font;
+                            font-family: $second-font;
+                            font-size: $small-font_size;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+// Productview/End
+
+// 

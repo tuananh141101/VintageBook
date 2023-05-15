@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
 @media screen and (max-width: 1200px) {
   header.header .header-container {
     width: 992px;
@@ -95,6 +97,12 @@
   footer.footer .footer__container .bottom .bottom__title ul li {
     text-align: center;
   }
+  section.book-type .book-type__container {
+    width: 992px;
+  }
+  section.product-view .product-view__container {
+    width: 992px;
+  }
 }
 @media screen and (max-width: 992px) {
   header.header .header-container {
@@ -139,6 +147,12 @@
   }
   div.overlay-menu p {
     top: 3%;
+  }
+  section.book-type .book-type__container {
+    width: 768px;
+  }
+  section.product-view .product-view__container {
+    width: 768px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -238,6 +252,26 @@
   div.overlay-menu p {
     top: 2%;
   }
+  section.book-type .book-type__container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  section.product-view .product-view__container {
+    width: 100%;
+    padding: 0 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.product-view .product-view__container .view-media {
+    width: 100%;
+    height: 557.25px;
+  }
+  section.product-view .product-view__container .view-detail {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 500px) {
   section.banner {
@@ -315,15 +349,195 @@
   footer.footer .footer__container .top .top__menu .info-menu p, footer.footer .footer__container .top .top__menu .info-menu span {
     font-size: 16px;
   }
+  section.product-view .product-view__container .view-media {
+    width: 100%;
+    height: 343.5px;
+  }
 }
+/*----------ROOT----------*/
+/*----------ROOT----------*/
+header .header-container .header-container__menu .sub-menu ul li:nth-child(2) a {
+  color: #C6322F;
+}
+
+header .header-container .header-container__menu .sub-menu ul li:nth-child(1) a {
+  color: rgb(36, 36, 36);
+}
+
 .book-type {
   width: 100%;
-  background-color: violet;
+  height: 20px;
+  padding: 30px 0;
 }
 .book-type__container {
   width: 1200px;
-  background-color: red;
+  height: 100%;
   margin: auto;
+}
+.book-type__container ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.book-type__container ul li {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  padding-right: 6px;
+}
+.book-type__container ul li a, .book-type__container ul li i {
+  color: #A39D9D;
+}
+.book-type__container ul li i {
+  font-size: 10px;
+}
+.book-type__container ul li:last-child a {
+  color: rgb(36, 36, 36);
+}
+.book-type__container ul li:nth-child(2), .book-type__container ul li:nth-child(4) {
+  padding-bottom: 10px;
+}
+
+.product-view {
+  width: 100%;
+  margin-bottom: 500px;
+}
+.product-view__container {
+  width: 1200px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.product-view__container .view-media {
+  width: 40%;
+  height: 640px;
+}
+.product-view__container .view-media .img-media {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.product-view__container .view-media .img-media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-view__container .view-detail {
+  width: 60%;
+  overflow: hidden;
+  word-wrap: break-word;
+  padding-left: 40px;
+}
+.product-view__container .view-detail .content-detail h1 {
+  font-size: 48px;
+  font-family: "Abhaya Libre", serif;
+  padding-bottom: 25px;
+}
+.product-view__container .view-detail .content-detail p {
+  font-size: "Inter", sans-serif;
+  color: rgb(36, 36, 36);
+  font-family: "Inter", sans-serif;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+.product-view__container .view-detail .content-detail p span {
+  color: #A39D9D;
+}
+.product-view__container .view-detail .content-detail p.description {
+  padding-bottom: 20px;
+}
+.product-view__container .view-detail .content-detail p.category {
+  padding-bottom: 20px;
+}
+.product-view__container .view-detail .content-detail p.price {
+  font-size: 24px;
+  font-family: "Abhaya Libre", serif;
+  padding-bottom: 20px;
+}
+.product-view__container .view-detail .content-detail p.share {
+  font-size: 16px;
+  font-family: "Abhaya Libre", serif;
+  color: rgb(36, 36, 36);
+  padding-bottom: 5px;
+}
+.product-view__container .view-detail .content-detail form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 30px;
+}
+.product-view__container .view-detail .content-detail form input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #BBA59E;
+  border-radius: 3px;
+  color: #fff;
+}
+.product-view__container .view-detail .content-detail form .quantity {
+  margin-right: 20px;
+}
+.product-view__container .view-detail .content-detail form .addCart {
+  margin-right: 6px;
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 150px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Abhaya Libre", serif;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #BBA59E;
+  cursor: pointer;
+}
+.product-view__container .view-detail .content-detail ul.share-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.product-view__container .view-detail .content-detail ul.share-media li {
+  padding-right: 10px;
+}
+.product-view__container .view-detail .content-detail ul.share-media li a {
+  color: rgb(36, 36, 36);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
 * {

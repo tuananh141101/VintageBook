@@ -61,6 +61,12 @@
             li {text-align: center;}
         }
     }
+
+    // Booktype/detailProduct
+    section.book-type .book-type__container {width: 992px;}
+
+    // Productview
+    section.product-view .product-view__container {width: 992px;}
 }
 
 
@@ -101,6 +107,11 @@
     // Overlay-mobile
     div.overlay-menu ul {top: 2%;}
     div.overlay-menu p {top: 3%;}
+
+    // Booktype/detailProduct
+    section.book-type .book-type__container {width: 768px;}
+
+    section.product-view .product-view__container {width: 768px;}
 }
 
 
@@ -171,6 +182,18 @@
     // Overlay-menu
     div.overlay-menu ul {top: 1%;}
     div.overlay-menu p {top: 2%;}
+
+    // Booktype/detailProduct
+    section.book-type .book-type__container {width: 100%;padding: 0 10px;}
+
+    section.product-view .product-view__container {
+        width: 100%; 
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    section.product-view .product-view__container .view-media {width: 100%;height: 557.25px;}
+    section.product-view .product-view__container .view-detail {width: 100%;padding-left: 0;}
 }
 
 
@@ -249,5 +272,8 @@
             }
         }
     }
+
+    // productview
+    section.product-view .product-view__container .view-media {width: 100%;height: 343.50px;}
 
 }
