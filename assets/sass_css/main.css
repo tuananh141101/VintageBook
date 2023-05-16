@@ -4,8 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
-/*----------ROOT----------*/
-/*----------ROOT----------*/
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap");
 @media screen and (max-width: 1200px) {
@@ -128,6 +128,9 @@
   section.eventsProduct .eventsProduct__container {
     width: 992px;
   }
+  section.contact .contact__container {
+    width: 992px;
+  }
 }
 @media screen and (max-width: 992px) {
   header.header .header-container {
@@ -224,6 +227,9 @@
     left: 5%;
   }
   section.eventsProduct .eventsProduct__container {
+    width: 768px;
+  }
+  section.contact .contact__container {
     width: 768px;
   }
 }
@@ -365,6 +371,47 @@
   section.eventsProduct .eventsProduct__container {
     width: 100%;
     padding: 0 10px;
+  }
+  section.contact .contact__container {
+    width: 100%;
+    padding: 0 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.contact .contact__container .map-contact {
+    width: 100%;
+    padding-left: 0;
+  }
+  section.contact .contact__container .map-contact img {
+    height: 557.25px;
+  }
+  section.contact .contact__container .form-contact {
+    width: 100%;
+    margin-top: 20px;
+  }
+  section.contact .contact__container .form-contact .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  section.contact .contact__container .form-contact .info ul {
+    width: 100%;
+  }
+  section.contact .contact__container .form-contact .form1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.contact .contact__container .form-contact .form1 input {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -740,6 +787,9 @@ section.productDetailPage {
 section.productDetailPage .products__container::after {
   content: "You also may like";
 }
+section.productDetailPage .products__container {
+  overflow: hidden;
+}
 
 /*----------ROOT----------*/
 /*----------ROOT----------*/
@@ -858,7 +908,7 @@ section.productDetailPage .products__container::after {
 }
 .about__container::before {
   content: "";
-  top: -7%;
+  top: -60px;
   left: 0;
   width: 28px;
   height: 2px;
@@ -868,12 +918,14 @@ section.productDetailPage .products__container::after {
 .about__container::after {
   content: "About Us";
   left: 3%;
-  top: -75px;
+  top: -72px;
   display: inline-block;
   color: rgb(36, 36, 36);
   font-size: 24px;
 }
 
+/*----------ROOT----------*/
+/*----------ROOT----------*/
 .eventsProduct {
   width: 100%;
   margin-top: 130px;
@@ -905,7 +957,7 @@ section.productDetailPage .products__container::after {
 }
 .eventsProduct__container::before {
   content: "";
-  top: -31px;
+  top: -60px;
   left: 0;
   width: 28px;
   height: 2px;
@@ -920,7 +972,7 @@ section.productDetailPage .products__container::after {
 .eventsProduct__container::after {
   content: "Events";
   left: 3%;
-  top: -43px;
+  top: -72px;
   display: inline-block;
   color: rgb(36, 36, 36);
   font-size: 24px;
@@ -942,9 +994,11 @@ section.productDetailPage .products__container::after {
   }
 }
 .eventsProduct__container .cardEvents {
-  background-color: #f3f0ef;
+  background-color: #dddcdc;
   overflow: hidden;
   border-radius: 3px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .eventsProduct__container .cardEvents img {
   width: 100%;
@@ -991,6 +1045,205 @@ section.productDetailPage .products__container::after {
   font-family: "Inter", sans-serif;
   text-align: left;
   padding-bottom: 10px;
+}
+
+/*----------ROOT----------*/
+/*----------ROOT----------*/
+.contact {
+  width: 100%;
+  margin-top: 130px;
+  margin-bottom: 50px;
+}
+.contact__container {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact__container::after, .contact__container::before {
+  position: absolute;
+  color: rgb(36, 36, 36);
+  font-family: "Abhaya Libre", serif;
+  font-weight: 600;
+}
+.contact__container::after {
+  content: "Contact Us";
+  top: -72px;
+  left: 3%;
+  display: inline-block;
+  color: rgb(36, 36, 36);
+  font-size: 24px;
+}
+@media (max-width:768px) {
+  .contact__container::after {
+    left: 0;
+    padding-left: 10px;
+  }
+}
+.contact__container::before {
+  content: "";
+  top: -60px;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  display: inline-block;
+  background-color: rgb(36, 36, 36);
+}
+@media (max-width:768px) {
+  .contact__container::before {
+    display: none;
+  }
+}
+.contact__container .form-contact {
+  width: 45%;
+}
+.contact__container .form-contact p {
+  font-family: "Inter", sans-serif;
+  color: rgb(36, 36, 36);
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+@media (max-width:480px) {
+  .contact__container .form-contact p {
+    font-size: 14px;
+  }
+}
+.contact__container .form-contact .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact__container .form-contact .info ul {
+  width: 49%;
+  padding-bottom: 30px;
+}
+.contact__container .form-contact .info ul li {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: rgb(36, 36, 36);
+}
+@media (max-width:480px) {
+  .contact__container .form-contact .info ul li {
+    font-size: 14px;
+  }
+}
+.contact__container .form-contact .info ul:last-child li i {
+  padding-right: 10px;
+  cursor: pointer;
+}
+.contact__container .form-contact .form1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 12px;
+}
+.contact__container .form-contact .form1 input {
+  outline: none;
+  width: 49%;
+  padding: 8px 12px;
+  font-family: "Abhaya Libre", serif;
+  font-size: 20px;
+  border: 2px solid #A39D9D;
+  color: rgb(36, 36, 36);
+  border-radius: 3px;
+}
+.contact__container .form-contact .form2 {
+  width: 100%;
+}
+.contact__container .form-contact .form2 input {
+  outline: none;
+  width: 100%;
+  height: 150px;
+  font-family: "Abhaya Libre", serif;
+  padding-top: 0;
+  font-size: 20px;
+  border: 2px solid #A39D9D;
+  color: rgb(36, 36, 36);
+  border-radius: 3px;
+}
+.contact__container .form-contact .form2 input::-webkit-input-placeholder {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 8px 0;
+  font-family: "Abhaya Libre", serif;
+  font-size: 20px;
+  color: #A39D9D;
+  pointer-events: none;
+}
+.contact__container .form-contact .form2 input::-moz-placeholder {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 8px 0;
+  font-family: "Abhaya Libre", serif;
+  font-size: 20px;
+  color: #A39D9D;
+  pointer-events: none;
+}
+.contact__container .form-contact .form2 input:-ms-input-placeholder {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 8px 0;
+  font-family: "Abhaya Libre", serif;
+  font-size: 20px;
+  color: #A39D9D;
+  pointer-events: none;
+}
+.contact__container .form-contact .form2 input::-ms-input-placeholder {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 8px 0;
+  font-family: "Abhaya Libre", serif;
+  font-size: 20px;
+  color: #A39D9D;
+  pointer-events: none;
+}
+.contact__container .form-contact .form2 input::placeholder {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 8px 0;
+  font-family: "Abhaya Libre", serif;
+  font-size: 20px;
+  color: #A39D9D;
+  pointer-events: none;
+}
+.contact__container .map-contact {
+  width: 55%;
+  padding-left: 20px;
+}
+.contact__container .map-contact img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 * {

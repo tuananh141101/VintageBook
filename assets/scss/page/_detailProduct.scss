@@ -248,5 +248,6 @@ section.productDetailPage {
     margin-top: 30px;
     margin-bottom: 0;
     .products__container::after {content: "You also may like";}
+    .products__container {overflow: hidden;}
 }
 // productdetailpage/End

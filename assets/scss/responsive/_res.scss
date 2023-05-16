@@ -81,6 +81,9 @@
 
     // Events
     section.eventsProduct .eventsProduct__container {width: 992px;}
+
+    // Contacts
+    section.contact .contact__container {width: 992px;}
 }
 
 
@@ -164,6 +167,9 @@
 
     // Events
     section.eventsProduct .eventsProduct__container {width: 768px;}
+
+    // Contacts
+    section.contact .contact__container {width: 768px;}
 }
 
 
@@ -260,6 +266,31 @@
 
     // Events
     section.eventsProduct .eventsProduct__container {width: 100%;padding: 0 10px;}
+
+    // Contacts
+    section.contact .contact__container {
+        width: 100%;
+        padding: 0 10px;
+        flex-direction: column-reverse;
+        .map-contact {
+            width: 100%;
+            padding-left: 0;
+            img {height: 557.25px;}
+        }
+        .form-contact {
+            width: 100%;
+            margin-top: 20px;
+            .info {
+                flex-direction: column;
+                justify-content: flex-start;
+                ul {width: 100%;}
+            }
+            .form1 {
+                flex-direction: column;
+                input {width: 100%;margin-bottom: 15px;}
+            }
+        }
+    }
  
 }
 
