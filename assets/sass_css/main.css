@@ -726,6 +726,7 @@
 
 .information {
   width: 100%;
+  margin-bottom: 100px;
 }
 .information__container {
   width: 1200px;
@@ -746,17 +747,17 @@
 }
 .information__container ul li {
   font-family: "Abhaya Libre", serif;
-  color: rgb(36, 36, 36);
+  color: #A39D9D;
   font-size: 24px;
   padding-right: 15px;
   cursor: pointer;
 }
-.information__container ul li:last-child {
-  color: #A39D9D;
+.information__container ul .active-li {
+  color: rgb(36, 36, 36);
 }
 .information__container .tab-addInfo {
   width: 100%;
-  visibility: visible;
+  display: none;
   margin-bottom: 30px;
 }
 .information__container .tab-addInfo table {
@@ -776,19 +777,133 @@
 }
 .information__container .tab-revie {
   width: 100%;
-  background-color: blue;
-  visibility: hidden;
+  display: none;
+}
+.information__container .tab-revie .comment {
+  width: 100%;
+  padding: 10px;
+  padding-left: 0;
+}
+.information__container .tab-revie .comment span {
+  color: rgb(36, 36, 36);
+  font-family: "Inter", sans-serif;
+}
+.information__container .tab-revie .reply-form {
+  width: 100%;
+  margin-top: 10px;
+}
+.information__container .tab-revie .reply-form h2 {
+  font-size: 38px;
+  font-family: "Abhaya Libre", serif;
+  color: rgb(36, 36, 36);
+}
+.information__container .tab-revie .reply-form p {
+  color: rgb(36, 36, 36);
+  font-family: "Abhaya Libre", serif;
+  margin-bottom: 8px;
+}
+.information__container .tab-revie .reply-form .rating li {
+  padding-right: 5px;
+}
+.information__container .tab-revie .reply-form .rating li i {
+  color: #A39D9D;
+  font-size: 20px;
+}
+.information__container .tab-revie .form-mes {
+  width: 100%;
+}
+.information__container .tab-revie .form-mes input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border: 2px solid #A39D9D;
+  color: rgb(36, 36, 36);
+  border-radius: 3px;
+  padding: 8px 12px 80px 8px;
+}
+.information__container .tab-revie .formNameMail {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #A39D9D;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+.information__container .tab-revie .formNameMail input {
+  width: 50%;
+  outline: none;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: rgb(36, 36, 36);
+  padding: 8px 12px;
+}
+.information__container .tab-revie .formNameMail input:last-child {
+  border-left: 1px solid #A39D9D;
+}
+.information__container .tab-revie button {
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: #BBA59E;
+  margin-top: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.information__container .active-tab {
+  display: block;
 }
 
 section.productDetailPage {
-  margin-top: 30px;
   margin-bottom: 0;
 }
-section.productDetailPage .products__container::after {
-  content: "You also may like";
-}
 section.productDetailPage .products__container {
-  overflow: hidden;
+  position: relative;
+}
+section.productDetailPage .products__container::after, section.productDetailPage .products__container::before {
+  position: absolute;
+  color: rgb(36, 36, 36);
+  font-family: "Abhaya Libre", serif;
+  font-weight: 600;
+}
+section.productDetailPage .products__container::after {
+  content: "Contact Us";
+  top: -72px;
+  left: 3%;
+  display: inline-block;
+  color: rgb(36, 36, 36);
+  font-size: 24px;
+}
+@media (max-width:768px) {
+  section.productDetailPage .products__container::after {
+    left: 0;
+    padding-left: 10px;
+  }
+}
+section.productDetailPage .products__container::before {
+  content: "";
+  top: -60px;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  display: inline-block;
+  background-color: rgb(36, 36, 36);
+}
+@media (max-width:768px) {
+  section.productDetailPage .products__container::before {
+    display: none;
+  }
 }
 
 /*----------ROOT----------*/

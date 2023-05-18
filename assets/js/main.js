@@ -1,3 +1,46 @@
+// callAPi
+const API_URL = "https://websitebook-api.vercel.app/products";
+
+async function callAPI(API_URL) {
+    const response = await axios.get(API_URL);
+    const data = response.data;
+
+    showItem(data);
+};
+
+function showItem(data) {
+    data.sort(() => Math.random() - 0.5);
+    let html = ``;
+    const IMG_PATH = `https://websitebook-api.vercel.app`;
+
+    const cardItem = document.querySelectorAll('.cardItem');
+    data.forEach((item) => {
+        html += `
+        <div class="owl-item">
+        <a href="./pagehtml/detailProduct.html" class="cardItem">
+                    <div class="item card">
+                        <div class="img-item">
+                            <img src="${IMG_PATH}${item.image}" alt="">
+                    </div>
+                    <div class="title-item">
+                        <h2 class="name">${item.name}</h2>
+                        <p class="price">${item.price}$</p>
+                        <p class="author">${item.author}<p>
+                    </div>
+            </div>
+        </a>
+        </div>
+        `;
+    });
+    const owlStage = document.querySelector('.owl-stage');
+    console.log(owlStage);
+    owlStage.innerHTML = html;
+};
+
+// callAPI(API_URL);
+
+
+
 // Search-icon 
 const form = document.querySelector('.form');
 const input = document.querySelector('#search-input');
@@ -32,8 +75,6 @@ window.addEventListener('scroll', () => {
 // Header-currentpage-active
 const tabLinks = document.querySelectorAll('.tablinks');
 for (let i = 0;i < tabLinks.length; i++) {
-    console.log(tabLinks[i]);
-
     tabLinks[i].addEventListener('click', (e) => {
         e.preventDefault;
         
@@ -42,13 +83,8 @@ for (let i = 0;i < tabLinks.length; i++) {
             item.classList.remove("active-current");
         });
         currentLi.classList.add("active-current");
-        console.log(currentLi); 
     });
 };
-
-
-
-
 
 // Overlay-menu
 const overlayMenu = document.querySelector('.overlay-menu');
@@ -69,7 +105,7 @@ const productCarousel = $('.products__container > .owl-carousel').owlCarousel({
     margin:20,
     nav:true,
     dots:false,
-    autoplay:true,
+    autoplay:false,
     autoplayTimeout:3000,
     autoplayHoverPause: true,
     responsive:{
@@ -91,6 +127,8 @@ const productCarousel = $('.products__container > .owl-carousel').owlCarousel({
     }
 });
 
+
+// EventPage product
 const eventCarousel = $('.owl-carousel').owlCarousel({
     loop:true,
     margin:20,
@@ -112,4 +150,4 @@ const eventCarousel = $('.owl-carousel').owlCarousel({
     }
 });
 
-// SignUpMail
+

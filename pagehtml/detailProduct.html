@@ -40,7 +40,7 @@
                         <li><a href="#" class="tablinks active-current">Book</a></li>
                         <li><a href="../pagehtml/aboutPage.html" class="tablinks">About</a></li>
                         <li><a href="../pagehtml/evnetPage.html" class="tablinks">Events</a></li>
-                        <li><a href="#" class="tablinks">Contact</a></li>
+                        <li><a href="./contactPage.html" class="tablinks">Contact</a></li>
                         <li>
                             <form class="form">
                                 <input type="text" placeholder="Search-books" id="search-input">
@@ -115,11 +115,11 @@
         <div class="information__container">
 
             <ul>
-                <li class="addInfo">Additional information</li>
-                <li class="revie">Reviews(0)</li>
+                <li class="addInfo active-li" id="li_info">Additional information</li>
+                <li class="revie" id="li_info">Reviews(0)</li>
             </ul>
 
-            <div class="tab-addInfo">
+            <div class="tab-addInfo" id="tabInfo tab-addInfo">
                 <table>
                     <tbody>
 
@@ -162,7 +162,36 @@
                 </table>
             </div>
 
-            <div class="tab-revie">tab-review</div>
+            <div class="tab-revie active-tab" id="tabInfo tab-revie">
+
+                <div class="comment">
+                    <span>There are no reviews yet.</span>
+                </div>
+
+                <div class="reply-form">
+                    <h2>Be the first to review "Ong trum cuoi cung".</h2>
+                    <p>Your email address will not be publisted. Required fields are marked</p>
+                    <p>Your rating *</p>
+                    <ul class="rating">
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+
+                <div class="form-mes">
+                    <input type="text" name="text" id="" required placeholder="Your review *" class="your-rev">
+                </div>
+
+                <div class="formNameMail">
+                    <input type="text" name="text" id="" required placeholder="Name *">
+                    <input type="email" name="email" id="" required placeholder="Email *">
+                </div>
+                <button>Submit</button>
+
+            </div>
 
         </div>
     </section>
@@ -412,7 +441,7 @@
     </div>
     <!-- Overlay-menu/End -->
 
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>  
 <script src="../assets/js/main.js"></script>
