@@ -1,13 +1,11 @@
 // callAPi
 const API_URL = "https://websitebook-api.vercel.app/products";
-
 async function callAPI(API_URL) {
     const response = await axios.get(API_URL);
     const data = response.data;
 
     showItem(data);
 };
-
 function showItem(data) {
     data.sort(() => Math.random() - 0.5);
     let html = ``;
@@ -73,18 +71,23 @@ window.addEventListener('scroll', () => {
 });
 
 // Header-currentpage-active
-const tabLinks = document.querySelectorAll('.tablinks');
-for (let i = 0;i < tabLinks.length; i++) {
-    tabLinks[i].addEventListener('click', (e) => {
-        e.preventDefault;
-        
-        let currentLi = e.target;
-        tabLinks.forEach((item) => {
-            item.classList.remove("active-current");
-        });
-        currentLi.classList.add("active-current");
-    });
-};
+const liInfo = document.querySelector('#li_info');
+const liRevie = document.querySelector('#li_revie');
+const tabInfo = document.querySelector('.tab-addInfo');
+const tabRevie = document.querySelector('.tab-revie');
+function openInfo() {
+    tabInfo.style.display = "block";
+    tabRevie.style.display = "none";
+    liInfo.style.color = "rgb(36, 36, 36)";
+    liRevie.style.color = "#A39D9D";
+}
+function openCmt() {
+    tabRevie.style.display = "block";
+    tabInfo.style.display = "none";
+    liRevie.style.color = "rgb(36, 36, 36)";
+    liInfo.style.color = "#A39D9D";
+}
+
 
 // Overlay-menu
 const overlayMenu = document.querySelector('.overlay-menu');
@@ -126,7 +129,6 @@ const productCarousel = $('.products__container > .owl-carousel').owlCarousel({
         }
     }
 });
-
 
 // EventPage product
 const eventCarousel = $('.owl-carousel').owlCarousel({

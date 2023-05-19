@@ -752,12 +752,12 @@
   padding-right: 15px;
   cursor: pointer;
 }
-.information__container ul .active-li {
+.information__container ul li:first-child {
   color: rgb(36, 36, 36);
 }
 .information__container .tab-addInfo {
   width: 100%;
-  display: none;
+  display: block;
   margin-bottom: 30px;
 }
 .information__container .tab-addInfo table {

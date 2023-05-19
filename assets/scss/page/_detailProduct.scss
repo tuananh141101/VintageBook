@@ -209,14 +209,14 @@ $background-color: #BBA59E;
                 font-size: $big-font_size;
                 padding-right: 15px;
                 cursor: pointer;
+                &:first-child {color: $main-color-font;}
             }
-            .active-li {color: $main-color-font;}
         }
 
         .tab-addInfo {
             width: 100%;
             // background-color: rgb(187, 171, 171);
-            display: none;
+            display: block;
             margin-bottom: 30px;
             table {
                 width: 100%;
@@ -235,7 +235,6 @@ $background-color: #BBA59E;
 
         .tab-revie {
             width: 100%;
-            // background-color: rgb(125, 125, 175);
             display: none;
 
             .comment {
