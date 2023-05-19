@@ -243,6 +243,40 @@ $background-color: #BBA59E;
                 padding: 10px;
                 padding-left: 0;
                 span {color: $main-color-font;font-family: $second-font;}
+
+                .comment-text {
+                    width: 100%;
+                    @include flex(flex,center,flex-start);
+
+                    .avt {
+                        width: 10%;
+                        img {
+                            width: 71px;
+                            height: 71px;
+                            object-fit: cover;
+                            border-radius:50%;
+                        }
+                    }
+
+                    .title {
+                        width: 90%;
+
+                        p {padding: 15px 0;}
+                        p.name-revie {
+                            color: $main-color-font;
+                            font-size: $normal-font_size;
+                            font-family: $second-font;
+                        }
+                        p.comment-revie {
+                            color: $main-color-font;
+                            font-size: $small-font_size;
+                            font-family: $second-font;
+                        }
+
+                    }
+
+                }
+
             }
 
             .reply-form {

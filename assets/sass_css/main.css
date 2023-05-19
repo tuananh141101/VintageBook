@@ -788,6 +788,44 @@
   color: rgb(36, 36, 36);
   font-family: "Inter", sans-serif;
 }
+.information__container .tab-revie .comment .comment-text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.information__container .tab-revie .comment .comment-text .avt {
+  width: 10%;
+}
+.information__container .tab-revie .comment .comment-text .avt img {
+  width: 71px;
+  height: 71px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.information__container .tab-revie .comment .comment-text .title {
+  width: 90%;
+}
+.information__container .tab-revie .comment .comment-text .title p {
+  padding: 15px 0;
+}
+.information__container .tab-revie .comment .comment-text .title p.name-revie {
+  color: rgb(36, 36, 36);
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+.information__container .tab-revie .comment .comment-text .title p.comment-revie {
+  color: rgb(36, 36, 36);
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
 .information__container .tab-revie .reply-form {
   width: 100%;
   margin-top: 10px;
