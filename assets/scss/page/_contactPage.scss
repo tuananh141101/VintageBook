@@ -147,6 +147,18 @@ $background-color: #BBA59E;
 
             }
 
+            button {
+                padding: 8px 12px;
+                font-size: $small-font_size;
+                color: #fff;
+                border: none;
+                outline: none;
+                background-color: $background-color;
+                margin-top: 10px;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
         }
 
         .map-contact {

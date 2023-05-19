@@ -916,7 +916,7 @@ section.productDetailPage .products__container::after, section.productDetailPage
   font-weight: 600;
 }
 section.productDetailPage .products__container::after {
-  content: "Contact Us";
+  content: "You also like";
   top: -72px;
   left: 3%;
   display: inline-block;
@@ -1336,6 +1336,17 @@ section.productDetailPage .products__container::before {
   color: gray;
   border: 2px solid #A39D9D;
   border-radius: 3px;
+}
+.contact__container .form-contact button {
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: #BBA59E;
+  margin-top: 10px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 .contact__container .map-contact {
   width: 55%;

@@ -70,23 +70,6 @@ window.addEventListener('scroll', () => {
     headerScroll.classList.add("active-header-scroll");
 });
 
-// Header-currentpage-active
-const liInfo = document.querySelector('#li_info');
-const liRevie = document.querySelector('#li_revie');
-const tabInfo = document.querySelector('.tab-addInfo');
-const tabRevie = document.querySelector('.tab-revie');
-function openInfo() {
-    tabInfo.style.display = "block";
-    tabRevie.style.display = "none";
-    liInfo.style.color = "rgb(36, 36, 36)";
-    liRevie.style.color = "#A39D9D";
-}
-function openCmt() {
-    tabRevie.style.display = "block";
-    tabInfo.style.display = "none";
-    liRevie.style.color = "rgb(36, 36, 36)";
-    liInfo.style.color = "#A39D9D";
-}
 
 
 // Overlay-menu
