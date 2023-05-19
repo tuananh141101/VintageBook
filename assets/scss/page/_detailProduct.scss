@@ -246,6 +246,8 @@ $background-color: #BBA59E;
                 .comment-text {
                     width: 100%;
                     @include flex(flex,center,flex-start);
+                    margin-bottom: 30px;
+
 
                     .avt {
                         width: 10%;
@@ -255,6 +257,7 @@ $background-color: #BBA59E;
                             object-fit: cover;
                             border-radius:50%;
                         }
+                        @include breakpoint(tablet-portrait) {display: none;}
                     }
 
                     .title {
@@ -271,6 +274,8 @@ $background-color: #BBA59E;
                             font-size: $small-font_size;
                             font-family: $second-font;
                         }
+                        @include breakpoint(tablet-portrait) {width: 100%;
+                        padding: 0 10px;}
 
                     }
 

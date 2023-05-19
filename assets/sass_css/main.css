@@ -799,6 +799,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 30px;
 }
 .information__container .tab-revie .comment .comment-text .avt {
   width: 10%;
@@ -809,6 +810,11 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+@media (max-width:768px) {
+  .information__container .tab-revie .comment .comment-text .avt {
+    display: none;
+  }
 }
 .information__container .tab-revie .comment .comment-text .title {
   width: 90%;
@@ -825,6 +831,12 @@
   color: rgb(36, 36, 36);
   font-size: 16px;
   font-family: "Inter", sans-serif;
+}
+@media (max-width:768px) {
+  .information__container .tab-revie .comment .comment-text .title {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
 .information__container .tab-revie .reply-form {
   width: 100%;
