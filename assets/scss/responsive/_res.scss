@@ -84,6 +84,10 @@
 
     // Contacts
     section.contact .contact__container {width: 992px;}
+
+    // EventPageDetail
+    section.detailevent .detailevent__container {width: 992px;}
+    section.detailevent .detailevent__container .img img {height: 558px;}
 }
 
 
@@ -170,6 +174,10 @@
 
     // Contacts
     section.contact .contact__container {width: 768px;}
+
+    // EventPageDetail
+    section.detailevent .detailevent__container {width: 768px;}
+    section.detailevent .detailevent__container .img img {height: 432px;}
 }
 
 
@@ -291,6 +299,10 @@
             }
         }
     }
+
+    // EventPageDetail
+    section.detailevent .detailevent__container {width: 100%; padding: 0 10px;}
+    section.detailevent .detailevent__container .img img {height: 432px;}
  
 }
 
@@ -384,4 +396,7 @@
     section.about .about__container .top .top__text p {font-size: 14px;}
     section.about .about__container .bottom .bottom__img {height: 339px;}
     section.about .about__container .bottom .bottom__text p {font-size: 14px;}
+
+    // EventPageDetail
+    section.detailevent .detailevent__container .img img {height: 270px;}
 }
