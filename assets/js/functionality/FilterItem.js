@@ -15,17 +15,40 @@ async function callAPI(API_URL) {
             // Check author
             if (valueFilter.Author.value != '') {
                 if (item.author != valueFilter.Author.value) {return false}
+                return true;
             }
 
-            // // Check category
-            // if (valueFilter.category.value != '') {
-            //     if (!item.categories.includes(valueFilter.category.value)) {return false;}
-            // }
+            // Check category
+            if (valueFilter.category.value != '') {
+                if (!item.categories.includes(valueFilter.category.value)) {return false;}
+                return true;
+            }
+
+            // Check name book
+            if (valueFilter.name.value != '') {
+                if (!item.name.includes(valueFilter.name.value)) {return false}
+                return true
+            }
+
+            // Check minprice
+            if (valueFilter.minPrice.value != '') {
+                if (item.price < valueFilter.minPrice.value) {return false}
+                return true
+            }
+
+            // Check maxprice
+            if (valueFilter.maxPrice.value != '') {
+                if (item.price > valueFilter.maxPrice.value) {return false}
+                return true
+            }
 
             return true;
         });
         showItem(dataFilter);
+        let resetFilter = document.getElementById("reset-filter");
+        resetFilter.addEventListener('click', function() {location.reload()})
     });
+
 
     showItem(dataFilter);
 }

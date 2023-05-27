@@ -94,11 +94,9 @@ $background-color: #BBA59E;
                     &:hover {color: #fff;}
                 }
                 select,input,button {cursor: pointer;}
-            }
-            .item:last-child {
                 p {
-                    color: $main-color-font;
-                    font-family: $main-font;
+                    color: $second-color-font;
+                    font-size: $small-font_size;
                 }
             }
         }
