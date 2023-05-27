@@ -59,7 +59,7 @@ function showItem(dataFilter) {
     dataFilter.forEach((item) => {
         const IMG_PATH = "https://websitebook-api.vercel.app";
         html += `
-        <a href="#" class="item">
+        <a href="../pagehtml/detailProduct.html?id=${item.id}" class="item">
             <img src="${IMG_PATH}${item.image}" alt="">
             <p class="name">${item.name}</p>
             <p class="author">${item.author}</p>
@@ -72,7 +72,5 @@ function showItem(dataFilter) {
     list.innerHTML = html;
     count.innerHTML = dataFilter.length;    
 };
-
-
 
 callAPI(API_URL);
