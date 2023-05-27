@@ -88,6 +88,14 @@
     // EventPageDetail
     section.detailevent .detailevent__container {width: 992px;}
     section.detailevent .detailevent__container .img img {height: 558px;}
+
+    // BookPage
+    section.book .book__container {
+        flex-direction: column;
+        width: 992px;
+        .filter {width: 100%;}
+        .list-item {width: 100%;}
+    }
 }
 
 
@@ -178,6 +186,9 @@
     // EventPageDetail
     section.detailevent .detailevent__container {width: 768px;}
     section.detailevent .detailevent__container .img img {height: 432px;}
+
+    // BookPage 
+    section.book .book__container {width: 768px;}
 }
 
 
@@ -303,7 +314,10 @@
     // EventPageDetail
     section.detailevent .detailevent__container {width: 100%; padding: 0 10px;}
     section.detailevent .detailevent__container .img img {height: 432px;}
- 
+
+    // BookPage 
+    section.book .book__container {width: 100%;padding: 0 10px;}
+    
 }
 
 

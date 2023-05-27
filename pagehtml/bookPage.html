@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vintage Book</title>
 
     <!-- Carousel -->
     <link rel="stylesheet" href="../libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
@@ -36,10 +36,10 @@
                 <div class="sub-menu">
                     <ul id="sub-menuLi">
                         <li><a href="../index.html" class="tablinks">Home</a></li>
-                        <li><a href="#" class="tablinks">Book</a></li>
+                        <li><a href="#" class="tablinks active-current">Book</a></li>
                         <li><a href="./aboutPage.html" class="tablinks">About</a></li>
                         <li><a href="./evnetPage.html" class="tablinks">Events</a></li>
-                        <li><a href="./contactPage.html" class="tablinks active-current">Contact</a></li>
+                        <li><a href="./contactPage.html" class="tablinks">Contact</a></li>
                         <li>
                             <form class="form">
                                 <input type="text" placeholder="Search-books" id="search-input">
@@ -68,6 +68,193 @@
     </section>
     <!--Productview/End -->     
 
+    <!-- List-Book/Start -->
+    <section class="book">
+        <div class="book__container">
+            <form action="" class="filter">
+
+                <div class="item">
+                    <label for="">Author</label>
+                    <select name="Author" id="">
+                        <option selected disabled>Select author</option>
+                        <option value="Danielle Steel">Danielle Steel</option>
+                        <option value="Kristin Fields">Kristin Fields</option>
+                        <option value="Etaf Rum">Etaf Rum</option>
+                        <option value="Michelle Obama">Michelle Obama</option>
+                        <option value="Trevor Noah">Trevor Noah</option>
+                        <option value="Tomi Adeymi">Tomi Adeymi</option>
+                        <option value="Tara Westover">Tara Westover</option>
+                        <option value="Camille Pagan">Camille Pagan</option>
+                        <option value="Ralph Ellison">Ralph Ellison</option>
+                        <option value="Maya Angelou">Maya Angelou</option>
+                        <option value="Marlon James">Marlon James</option>
+                        <option value="Nes Vizzini">Nes Vizzini</option>
+                        <option value="Dr. Seuss">Dr. Seuss</option>
+                        <option value="R. J. Palacio">R. J. Palacio</option>
+                        <option value="Mark Hyman M.D">Mark Hyman M.D</option>
+                        <option value="Katie Parla">Katie Parla</option>
+                        <option value="Michael Pollan">Michael Pollan</option>
+                        <option value="A. J. Finn">A. J. Finn</option>
+                        <option value="Rachels Hollis">Rachels Hollis</option>
+                        <option value="Mark Manson">Mark Manson</option>
+                        <option value="Elliot Ackerman">Elliot Ackerman</option>
+                        <option value="Jordan B. Peterson">Jordan B. Peterson</option>
+                        <option value="Lisa Wingate">Lisa Wingate</option>
+                        <option value="Delia Owens">Delia Owens</option>
+                        <option value="Peter Hellers">Peter Hellers</option>
+                        <option value="James Holland">James Holland</option>
+                        <option value="Patrick Radden Keefe">Patrick Radden Keefe</option>
+                        <option value="Stephen Hawking">Stephen Hawking</option>
+                        <option value="Michael Wolf">Michael Wolf</option>
+                        <option value="Susan Bernhard">Susan Bernhard</option>
+                        <option value="Ismail Kadare">Ismail Kadare</option>
+                    </select>
+                </div>
+
+                <div class="item">
+                    <label for="">Category</label>
+                    <select name="category" id="">
+                        <option selected disabled>Select category</option>
+                        <option value="Uncategorized">Uncategorized</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Children's">Children's</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Family">Family</option>
+                        <option value="Cooking">Cooking</option>
+                        <option value="Politics">Politics</option>
+                        <option value="History">History</option>
+                    </select>
+                </div> 
+
+                <div class="item">
+                    <label for="">Search Book</label>
+                    <input type="text" name="name" id="" placeholder="Name book">
+                </div>
+
+                <div class="item">
+                    <label for="">Min Price</label>
+                    <input type="number" name="minPrice" id="" placeholder="Min price">
+                </div>
+
+                <div class="item">
+                    <label for="">Max Price</label>
+                    <input type="number" name="maxPrice" id="" placeholder="Max price">
+                </div>
+
+                <div class="item button" style="justify-content: center;background-color: transparent;">
+                    <button id="start-filter">Filter</button>
+                    <button class="reset" id="reset-filter">Reset</button>
+                </div>
+                
+                <div class="item">
+                    <p>Found <span class="count">0</span> books</p>
+                </div>
+
+            </form>
+
+            <div class="list-item" id="list">
+
+                <a href="#" class="item">
+                    <img src="../assets/img/vintagebook-1.jpg" alt="">
+                    <p class="name">Ong Trum Cuoi Cung</p>
+                    <p class="author">Mario Puzo</p>
+                    <p class="category">The loai</p>
+                    <p class="price">234$</p>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- List-Book/End -->
+
+    <!-- Footer/Start -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="top">
+
+                <div class="top__logo">
+
+                    <div class="img-logo">
+                        <h2>Vintage Book</h2>
+                        <p>Thanh Xuan - Khuong Mai, Ha Noi - Viet Nam</p>
+                        <p><a href="#">See Location <i class="fa-solid fa-angle-right"></i></a></p>
+                    </div>
+
+                    <div class="content-logo">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Book</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Event</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+                <div class="top__menu">
+
+                    <div class="content-menu">
+                        <ul>
+                            <li><a href="#">New Book</a></li>
+                            <li><a href="#">Best Selling Book</a></li>
+                            <li><a href="#">Sale Book</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-menu">
+                        <p><span>Tel:</span> 0123456789</p>
+                        <p><span>Email:</span> Vintagebook@gmail.com</p>
+                        <ul>
+                            <li>
+                                <img src="../assets/img/mastercard.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/visa.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/martropng.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/mom.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="bottom">
+
+                <div class="bottom__media">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="bottom__title">
+                    <ul>
+                        <li>© Copyright 2023</li>
+                        <li><i class="fa-solid fa-circle"></i></li>
+                        <li>Vintage Book by T.A</li>
+                        <li><i class="fa-solid fa-circle"></i></li>
+                        <li>All Rights Reserved	
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer/End -->
+
     <!-- Overlay-menu/Start -->
     <div class="overlay-menu">
         <ul>
@@ -88,9 +275,10 @@
     </div>
     <!-- Overlay-menu/End -->
     
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>  
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/functionality/FilterItem.js"></script>
 </body>
 </html>

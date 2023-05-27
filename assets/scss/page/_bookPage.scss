@@ -1,0 +1,146 @@
+@mixin flex($display,$alignitem,$justifycontent) {
+    display: $display;
+    align-items: $alignitem;
+    justify-content: $justifycontent;
+}
+$breakpoints: (
+    "phone": "max-width:480px",
+    "tablet-portrait": "max-width:768px",
+    "tablet-lanscape": "max-width:992px",
+    "laptop": "max-width:1200px",
+);
+@mixin breakpoint($user-value) {
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map {
+        @media (#{$my-map}) {@content}
+    } @else {
+        @error "Breakpoints loi"
+    } 
+}
+
+/*----------ROOT----------*/ 
+
+// Font-family
+$main-font: 'Abhaya Libre', serif;
+$second-font: 'Inter', sans-serif;
+// Font-family
+
+// Font-size
+$big-font_size: 24px;
+$normal-font_size: 20px;
+$small-font_size: 16px;
+$smallest-font_size: 14px;
+// Font-size
+
+// Color
+$main-color-font: rgb(36, 36, 36);
+$active-color-font: #C6322F;
+$second-color-font: #A39D9D;
+$background-color: #BBA59E;
+
+/*----------ROOT----------*/ 
+
+
+
+.book {
+    width: 100%;
+    &__container {
+        width: 1200px;
+        margin: auto;
+        @include flex(flex,start,space-between);
+
+        .filter {
+            width: 24%;
+            .item {
+                background-color: $background-color;
+                border-radius: 3px;
+                height: 40px;
+                @include flex(flex,center,flex-start);
+                margin: 10px 0;
+                &:first-child {margin: 0;}
+                input,select,button {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    color: $main-color-font;
+                    font-family: $second-font;
+                    font-size: $smallest-font_size;
+                    padding-left: 5px;
+                }
+                input[type="number"]::-webkit-inner-spin-button,
+                input[type="number"]::-webkit-outer-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+                }
+                label {
+                    width: 30%;
+                    font-size: $small-font_size;
+                    font-family: $main-font;
+                    color: $main-color-font;
+                    border-right: 1px solid $second-color-font;
+                    padding-left: 5px;
+                }
+                select {width: 70%;height: 100%;}
+                input {width: 70%;height: 100%;}
+                button {
+                    background-color: #C6322F;
+                    padding: 8px 12px;
+                    border-radius: 3px;
+                    margin-right: 10px;
+                    transition: .2s;
+                    font-family: $second-font;
+                    color: $main-color-font;
+                    font-size: $small-font_size;
+                    &:hover {color: #fff;}
+                }
+                select,input,button {cursor: pointer;}
+            }
+            .item:last-child {
+                p {
+                    color: $main-color-font;
+                    font-family: $main-font;
+                }
+            }
+        }
+
+        .list-item {
+            width: 75%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 15px;
+            row-gap: 15px;
+            @include breakpoint(phone) {grid-template-columns: 1fr 1fr;}
+
+            a {
+                display: block;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 396.67px;
+                    object-fit: cover;
+                    border-radius: 3px;
+                    @include breakpoint(laptop) {height: 426.67px;}
+                    @include breakpoint(tablet-lanscape) {height: 328px;}
+                    @include breakpoint(tablet-portrait) {height: 318.67px;}
+                    @include breakpoint(phonte) {height: 296px;}
+                }
+                .name {
+                    font-family: $main-font;
+                    font-size: $big-font_size;
+                    color: $main-color-font;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .author,.price,.category {
+                    font-family: $second-font;
+                    font-size: $small-font_size;
+                    color: $second-color-font;
+                    text-align: center;
+                }
+            }
+
+        }
+
+    }
+}

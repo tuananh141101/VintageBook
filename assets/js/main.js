@@ -1,39 +1,39 @@
 // callAPi
-const API_URL = "https://websitebook-api.vercel.app/products";
-async function callAPI(API_URL) {
-    const response = await axios.get(API_URL);
-    const data = response.data;
+// const API_URL = "https://websitebook-api.vercel.app/products";
+// async function callAPI(API_URL) {
+//     const response = await axios.get(API_URL);
+//     const data = response.data;
 
-    showItem(data);
-};
-function showItem(data) {
-    data.sort(() => Math.random() - 0.5);
-    let html = ``;
-    const IMG_PATH = `https://websitebook-api.vercel.app`;
+//     showItem(data);
+// };
+// function showItem(data) {
+//     data.sort(() => Math.random() - 0.5);
+//     let html = ``;
+//     const IMG_PATH = `https://websitebook-api.vercel.app`;
 
-    const cardItem = document.querySelectorAll('.cardItem');
-    data.forEach((item) => {
-        html += `
-        <div class="owl-item">
-        <a href="./pagehtml/detailProduct.html" class="cardItem">
-                    <div class="item card">
-                        <div class="img-item">
-                            <img src="${IMG_PATH}${item.image}" alt="">
-                    </div>
-                    <div class="title-item">
-                        <h2 class="name">${item.name}</h2>
-                        <p class="price">${item.price}$</p>
-                        <p class="author">${item.author}<p>
-                    </div>
-            </div>
-        </a>
-        </div>
-        `;
-    });
-    const owlStage = document.querySelector('.owl-stage');
-    console.log(owlStage);
-    owlStage.innerHTML = html;
-};
+//     const cardItem = document.querySelectorAll('.cardItem');
+//     data.forEach((item) => {
+//         html += `
+//         <div class="owl-item">
+//         <a href="./pagehtml/detailProduct.html" class="cardItem">
+//                     <div class="item card">
+//                         <div class="img-item">
+//                             <img src="${IMG_PATH}${item.image}" alt="">
+//                     </div>
+//                     <div class="title-item">
+//                         <h2 class="name">${item.name}</h2>
+//                         <p class="price">${item.price}$</p>
+//                         <p class="author">${item.author}<p>
+//                     </div>
+//             </div>
+//         </a>
+//         </div>
+//         `;
+//     });
+//     const owlStage = document.querySelector('.owl-stage');
+//     console.log(owlStage);
+//     owlStage.innerHTML = html;
+// };
 
 // callAPI(API_URL);
 
