@@ -2,10 +2,12 @@ const API_URL = "https://websitebook-api.vercel.app/products";
 
 async function callAPI(API_URL) {
     const response = await axios.get(API_URL);
-    let data = response.data; //listproduct
+    let data = response.data; 
 
-    let dataFilter = data; //productfilter
+    let dataFilter = data; 
     const filter = document.querySelector(".filter");
+
+    showItem(dataFilter);
     
     filter.addEventListener('submit', function filterItem(event) {
         event.preventDefault();
@@ -46,11 +48,9 @@ async function callAPI(API_URL) {
         });
         showItem(dataFilter);
         let resetFilter = document.getElementById("reset-filter");
-        resetFilter.addEventListener('click', function() {location.reload()})
+        resetFilter.addEventListener('click', () => {location.reload()});
     });
 
-
-    showItem(dataFilter);
 }
 
 function showItem(dataFilter) {

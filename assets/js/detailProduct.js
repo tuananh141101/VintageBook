@@ -5,6 +5,7 @@ async function callAPI(API_URL) {
     
     showDetail(data);
     showMoreInFo(data);
+    showNameBook(data);
 }
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -91,5 +92,17 @@ function showMoreInFo(data) {
         }
     });
     document.getElementById("tBody").innerHTML = html;
+}
+function showNameBook(data) {
+    let html = ``;
+    data.forEach((item) => {
+        if (item.id == id) {
+            html +=
+            `
+            <a href="" class="name-book">${item.name}</a>
+            `;
+        };
+        document.getElementById("nameBook").innerHTML = html;
+    });
 }
 callAPI(API_URL);
