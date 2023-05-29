@@ -9,7 +9,6 @@ async function callAPI(API_URL) {
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
-console.log(id);
 
 function showDetail(data) {
     let html = ``;
@@ -52,7 +51,6 @@ function showDetail(data) {
     });
 
     document.querySelector(".product-view__container").innerHTML = html;
-    // console.log(document.querySelector(".product-view__container").innerHTML = html;);
 }
 function showMoreInFo(data) {
     let html = ``;

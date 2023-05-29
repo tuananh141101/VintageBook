@@ -94,10 +94,7 @@ $background-color: #BBA59E;
                     &:hover {color: #fff;}
                 }
                 select,input,button {cursor: pointer;}
-                p {
-                    color: $second-color-font;
-                    font-size: $small-font_size;
-                }
+                
             }
         }
 
@@ -130,12 +127,13 @@ $background-color: #BBA59E;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                 }
-                .author,.price,.category {
+                .author,.price {
                     font-family: $second-font;
                     font-size: $small-font_size;
                     color: $second-color-font;
                     text-align: center;
                 }
+
             }
 
         }

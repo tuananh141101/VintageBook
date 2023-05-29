@@ -63,7 +63,7 @@ function showItem(dataFilter) {
             <img src="${IMG_PATH}${item.image}" alt="">
             <p class="name">${item.name}</p>
             <p class="author">${item.author}</p>
-            <p class="category">${item.categories}</p>
+            <p class="category" style="color:#A39D9D; font-size: 16px; font-family: 'Inter', sans-serif; text-align: center;">${item.categories}</p>
             <p class="price">${item.price}$</p>
         </a>
         `;
