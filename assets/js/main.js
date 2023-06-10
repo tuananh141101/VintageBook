@@ -57,7 +57,7 @@ function showItemBestSelling(data) {
 
         const owlItem = owlItems[index];
         const html = `
-        <a href="./pagehtml/detailProduct.html" class="cardItem">
+        <a href="./pagehtml/detailProduct.html${item.id}" class="cardItem">
             <div class="item card">
                 <div class="img-item">
                     <img src="${IMG_PATH}${item.image}" alt="">
@@ -90,7 +90,7 @@ function showItemSale(data) {
 
         const owlItem = owlItems[index];
         const html = `
-        <a href="./pagehtml/detailProduct.html" class="cardItem">
+        <a href="./pagehtml/detailProduct.html${item.id}" class="cardItem">
             <div class="item card">
                 <div class="img-item">
                     <img src="${IMG_PATH}${item.image}" alt="">
