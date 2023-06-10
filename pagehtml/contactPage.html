@@ -20,6 +20,17 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/sass_css/main.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("x9Fs6W_6RSx0rPpAN");
+        })();
+    </script>
+
 </head>
 <body>
     <!-- Header/Start -->
@@ -101,7 +112,7 @@
                     <textarea name="" id="mes_Textarea" cols="30" rows="10" required="required">Message:</textarea>
                 </div>
 
-                <button type="submit" id="submit_contact">Submit</button>
+                <button type="submit" id="submit_contact" onclick="sendMail()">Submit</button>
 
             </div>
 

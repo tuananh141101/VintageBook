@@ -1,41 +1,119 @@
-// callAPi
-// const API_URL = "https://websitebook-api.vercel.app/products";
-// async function callAPI(API_URL) {
-//     const response = await axios.get(API_URL);
-//     const data = response.data;
+const API_URL = "https://websitebook-api.vercel.app/products";
+async function callAPI(API_URL) {
+    const response = await axios.get(API_URL);
+    const data = response.data;
 
-//     showItem(data);
-// };
-// function showItem(data) {
-//     data.sort(() => Math.random() - 0.5);
-//     let html = ``;
-//     const IMG_PATH = `https://websitebook-api.vercel.app`;
+    showItemNewBook(data);
+    showItemBestSelling(data);
+    showItemSale(data);
+};
+callAPI(API_URL);
 
-//     const cardItem = document.querySelectorAll('.cardItem');
-//     data.forEach((item) => {
-//         html += `
-//         <div class="owl-item">
-//         <a href="./pagehtml/detailProduct.html" class="cardItem">
-//                     <div class="item card">
-//                         <div class="img-item">
-//                             <img src="${IMG_PATH}${item.image}" alt="">
-//                     </div>
-//                     <div class="title-item">
-//                         <h2 class="name">${item.name}</h2>
-//                         <p class="price">${item.price}$</p>
-//                         <p class="author">${item.author}<p>
-//                     </div>
-//             </div>
-//         </a>
-//         </div>
-//         `;
-//     });
-//     const owlStage = document.querySelector('.owl-stage');
-//     console.log(owlStage);
-//     owlStage.innerHTML = html;
-// };
+function showItemNewBook(data) {
+    data.sort(() => Math.random() - 0.5);
+    const IMG_PATH = `https://websitebook-api.vercel.app`;
+    let count = 0;
 
-// callAPI(API_URL);
+    
+    const owlItems = document.querySelectorAll('.products-new .owl-item');
+
+    data.forEach((item, index) => {
+        if (count === 20) {
+            return; // Kết thúc vòng lặp sau khi chạy 10 lần
+        }
+
+        const owlItem = owlItems[index];
+        const html = `
+        <a href="./pagehtml/detailProduct.html?id=${item.id}" class="cardItem">
+            <div class="item card">
+                <div class="img-item">
+                    <img src="${IMG_PATH}${item.image}" alt="">
+                </div>
+                <div class="title-item">
+                    <h2 class="name">${item.name}</h2>
+                    <p class="price">${item.price}$</p>
+                    <p class="author">${item.author}</p>
+                </div>
+            </div>
+        </a>
+        `;
+
+        owlItem.innerHTML = html;
+        count++;
+    });
+};
+function showItemBestSelling(data) {
+    data.sort(() => Math.random() - 0.5);
+    const IMG_PATH = `https://websitebook-api.vercel.app`;
+    let count = 0;
+
+    
+    const owlItems = document.querySelectorAll('.products-bestselling .owl-item');
+
+    data.forEach((item, index) => {
+        if (count === 20) {
+            return; // Kết thúc vòng lặp sau khi chạy 10 lần
+        }
+
+        const owlItem = owlItems[index];
+        const html = `
+        <a href="./pagehtml/detailProduct.html" class="cardItem">
+            <div class="item card">
+                <div class="img-item">
+                    <img src="${IMG_PATH}${item.image}" alt="">
+                </div>
+                <div class="title-item">
+                    <h2 class="name">${item.name}</h2>
+                    <p class="price">${item.price}$</p>
+                    <p class="author">${item.author}</p>
+                </div>
+            </div>
+        </a>
+        `;
+
+        owlItem.innerHTML = html;
+        count++;
+    });
+};
+function showItemSale(data) {
+    data.sort(() => Math.random() - 0.5);
+    const IMG_PATH = `https://websitebook-api.vercel.app`;
+    let count = 0;
+
+    
+    const owlItems = document.querySelectorAll('.products-sale .owl-item');
+
+    data.forEach((item, index) => {
+        if (count === 20) {
+            return; // Kết thúc vòng lặp sau khi chạy 10 lần
+        }
+
+        const owlItem = owlItems[index];
+        const html = `
+        <a href="./pagehtml/detailProduct.html" class="cardItem">
+            <div class="item card">
+                <div class="img-item">
+                    <img src="${IMG_PATH}${item.image}" alt="">
+                </div>
+                <div class="title-item">
+                    <h2 class="name">${item.name}</h2>
+                    <p class="price">${item.price}$</p>
+                    <p class="author">${item.author}</p>
+                </div>
+            </div>
+        </a>
+        `;
+
+        owlItem.innerHTML = html;
+        count++;
+    });
+};
+
+
+
+
+
+
 
 
 
@@ -134,5 +212,9 @@ const eventCarousel = $('.owl-carousel').owlCarousel({
         }
     }
 });
+
+// Send email
+const email = document.getElementById('email');
+const buttonEmail = document.getElementById('button');
 
 

@@ -5,7 +5,6 @@
 @use 'page/contactPage.scss';
 @use 'page/detailEvent.scss';
 @use 'page/bookPage.scss';
-
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 // font-family: 'Abhaya Libre', serif;
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@200;300;400;500&display=swap');
@@ -338,7 +337,6 @@ $background-color: #BBA59E;
                     font-family: $main-font;
                     font-weight: 600;
                     text-overflow: ellipsis;
-                    white-space: nowrap;
                     overflow: hidden;
                     @include breakpoint(phone) {font-size: $normal-font_size;}
                 }
@@ -840,3 +838,4 @@ $background-color: #BBA59E;
     z-index: 30;
 }
 // Overlay-menu/End
+

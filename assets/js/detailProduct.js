@@ -6,10 +6,13 @@ async function callAPI(API_URL) {
     showDetail(data);
     showMoreInFo(data);
     showNameBook(data);
-}
+    showMoreBook(data);
+};
+callAPI(API_URL);
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
+console.log(id);
 
 function showDetail(data) {
     let html = ``;
@@ -105,4 +108,36 @@ function showNameBook(data) {
         document.getElementById("nameBook").innerHTML = html;
     });
 }
-callAPI(API_URL);
+function showMoreBook(data) {
+    data.sort(() => Math.random() - 0.5);
+    const IMG_PATH = `https://websitebook-api.vercel.app`;
+    let count = 0;
+
+    const owlItems = document.querySelectorAll('.productDetailPage .owl-item');
+
+    data.forEach((item, index) => {
+        if (count === 20) {
+            return; // Kết thúc vòng lặp sau khi chạy 10 lần
+        }
+        console.log(index);
+
+        const owlItem = owlItems[index];
+        const html = `
+        <a href="./pagehtml/detailProduct.html" class="cardItem">
+            <div class="item card">
+                <div class="img-item">
+                    <img src="${IMG_PATH}${item.image}" alt="">
+                </div>
+                <div class="title-item">
+                    <h2 class="name">${item.name}</h2>
+                    <p class="price">${item.price}$</p>
+                    <p class="author">${item.author}</p>
+                </div>
+            </div>
+        </a>
+        `;
+
+        owlItem.innerHTML = html;
+        count++;
+    });
+};

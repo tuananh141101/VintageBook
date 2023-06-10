@@ -2007,7 +2007,6 @@ button {
   font-family: "Abhaya Libre", serif;
   font-weight: 600;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 @media (max-width:480px) {
