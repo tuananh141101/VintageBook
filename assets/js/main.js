@@ -19,7 +19,7 @@ function showItemNewBook(data) {
 
     data.forEach((item, index) => {
         if (count === 20) {
-            return; // Kết thúc vòng lặp sau khi chạy 10 lần
+            return; // Kết thúc vòng lặp sau khi chạy 20 lần
         }
 
         const owlItem = owlItems[index];
